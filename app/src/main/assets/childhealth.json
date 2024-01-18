@@ -1,0 +1,3223 @@
+[
+  {
+    "id": "brain",
+    "name": "Brain",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Alert, happy and playful.",
+            "type": "text"
+          },
+          {
+            "id": 1,
+            "content": "Normal neurodevelopment.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Normal head circumference for age.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "Daydreaming.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Sleep terrors",
+            "type": "button",
+            "sheet": {
+              "title": "Sleep/Night Terrors",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "Sleep terrors typically occurs between 4 and 12 years of age.",
+                  "type": "text"
+                },
+                {
+                  "id": 1,
+                  "content": "The events occur during the first one-third of nocturnal sleep.",
+                  "type": "text"
+                },
+                {
+                  "id": 2,
+                  "content": "The child awakens abruptly from sleep with a loud scream, is agitated, and has a flushed face, sweating, and a fast heart beat.",
+                  "type": "greentext"
+                },
+                {
+                  "id": 3,
+                  "content": "The child may jump out of bed as if running away from an unseen threat, is usually unresponsive and may become even more agitated by the caregiver's efforts at calming.",
+                  "type": "greentext"
+                },
+                {
+                  "id": 4,
+                  "content": "The child usually does not remember the episode later.",
+                  "type": "text"
+                },
+                {
+                  "id": 5,
+                  "content": "There is usually a strong family history.",
+                  "type": "text"
+                },
+                {
+                  "id": 6,
+                  "content": "Reference: Morse AM, Kotagal S, Parasomnias of childhood, including sleepwalking. UpToDate, updated 2023 Oct, cited 2023 Nov.",
+                  "type": "text"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "head circumference enlarges too fast or too slow.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Growth Charts",
+            "type": "link",
+            "linkUrl": "https://www.cdc.gov/growthcharts/who_charts.htm#The%20WHO%20Growth%20Charts"
+          },
+          {
+            "id": 3,
+            "content": "milestones and development are delayed.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "anterior fontanel (soft spot) in scull is still open after 24 months.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "jerking eye movements (nystagmus) are observed.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "becomes clumsy or losing milestones.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "loss of balance or dizziness occurs.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "speech deteriorates.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "repeated or chronic headaches occur.",
+            "type": "text"
+          },
+          {
+            "id": 10,
+            "content": "repetitive movements such as hand-flapping or body rocking are observed.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "child is lethargic, unresponsive or unconscious.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "lethargic",
+            "type": "button",
+            "sheet": {
+              "title": "Lethargy",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "Lethargy is a change in the baby's condition and is characterized by:\n* unresponsiveness.\n*excessive sleepiness, difficulty to wake up and refusing to feed.\n*staring and not making eye contact.\n*not smiling and a weak cry.",
+                  "type": "redtext"
+                },
+                {
+                  "id": 1,
+                  "content": "Integrated Management of Childhood Illness (IMCI) training video from WHO to demonstrate lethargy:",
+                  "type": "text"
+                },
+                {
+                  "id": 2,
+                  "content": "Video",
+                  "type": "link",
+                  "linkUrl": "https://youtu.be/3Srhjp9k7fw"
+                },
+                {
+                  "id": 3,
+                  "content": "Babies no. 2 and no. 4 in the video are lethargic",
+                  "type": "text"
+                },
+                {
+                  "id": 4,
+                  "content": "Causes:",
+                  "type": "titletext"
+                },
+                {
+                  "id": 5,
+                  "content": "It can be caused by\n*dehydration.\n*severe infection.\n*low blood sugar.\n*a metabolic disease.",
+                  "type": "text"
+                },
+                {
+                  "id": 6,
+                  "content": "Lethargy is a medical emergency and the baby should be seen immediately for an assessment and emergency treatment.",
+                  "type": "redtext"
+                }
+              ]
+            }
+          },
+          {
+            "id": 3,
+            "content": "child is difficult to wake up or very sleepy all the time.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "anterior fontanel is bulging.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "anterior fontanel bulges",
+            "type": "button",
+            "sheet": {
+              "title": "Bulging Fontanel",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "fontanel",
+                  "type": "image"
+                },
+                {
+                  "id": 1,
+                  "content": "Image credit: Wikipedia",
+                  "type": "text"
+                },
+                {
+                  "id": 2,
+                  "content": "The anterior fontanel is a normal opening between the skull bones in babies, that closes between 12-24 months.",
+                  "type": "text"
+                },
+                {
+                  "id": 3,
+                  "content": "A bulging fontanel indicates increased pressure and is an emergency. It can be caused by infection, swelling or fluid.",
+                  "type": "redtext"
+                },
+                {
+                  "id": 4,
+                  "content": "The normal pulsation of the fontanel also disappears with increased pressure.",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          {
+            "id": 6,
+            "content": "neck stiffness, fever and/or severe headache occur.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "any seizures or convulsions are seen. (take a video if possible)",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "difficulty in speaking or slurred speech is noted.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "confusion or sudden change in behavior is seen.",
+            "type": "text"
+          },
+          {
+            "id": 10,
+            "content": "child complains of double vision.",
+            "type": "text"
+          },
+          {
+            "id": 11,
+            "content": "pupils of the eyes are different in size.",
+            "type": "text"
+          },
+          {
+            "id": 12,
+            "content": "child presents with sudden weakness of a limb or limbs.",
+            "type": "text"
+          },
+          {
+            "id": 13,
+            "content": "paralysis of muscles on one side of the face is noted.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 8.2 Raised intracranial pressure, 8.3 Seizures and non-epileptic events, 8.4 Acute weakness, 8.5 Acute ataxia, 8.6 Headache, 8.7 Central nervous system infections, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Reference: Morse AM, Kotagal S, Parasomnias of childhood, including sleepwalking. UpToDate, updated 2023 Oct, cited 2023 Nov.",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "breathing",
+    "name": "Breathing",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Normal breathing is less than 40 breaths/minute.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "severe and persistent coughing presents.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "child vomits after coughing.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "a barking cough or hoarse voice is noted.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "child is snoring.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "child is coughing for more than 14 days.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "coughing every night or coughing with exercise is noted.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "asthma symptoms are observed more than once a week in spite of treatment.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "child is living in the same household or is in frequent contact with a person diagnosed with tuberculosis.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "lips and tongue turn blue (cyanosis).",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "oxygen saturation is less than 90% in room air.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "fast breathing is observed (more than 50/minute 2-12 months, more than 40/minute 1-5 years).",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "there is swelling of the face or throat.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "an asthma attack is not responding to treatment.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "not breathing or choking",
+            "type": "button",
+            "sheet": {
+              "title": "Apnoea/Choking",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "No breathing for 20 seconds or turning blue while not breathing.",
+                  "type": "text"
+                },
+                {
+                  "id": 1,
+                  "content": "This is an emergency and needs immediate attention. If the baby/child does not respond to stimulation, mouth to mouth breathing is necessary. Remove any obstruction if present. Use Heimlich manoever to remove foreign body, if choking occurred. If there is no heartbeat, do CPR.",
+                  "type": "redtext"
+                },
+                {
+                    "id": 2,
+                    "content": "CPR Training Video",
+                    "type": "link",
+                    "linkUrl": "https://www.rch.org.au/cocoon/project/moving-on/Family_resuscitation_training_videos/"
+                },
+                {
+                  "id": 3,
+                  "content": "There are many causes for apnoea and admission to a hospital will be necessary for tests, treatment and observation. Treatment will depend on the cause.",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          {
+            "id": 7,
+            "content": "chest indrawing",
+            "type": "button",
+            "sheet": {
+              "title": "Chest Indrawing",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "The chest is moving outwards with inspiration to allow the lungs to expand. If the lower end of the ribcage is moving inward with inspiration, it is a sign of significant lung pathology. Babies are nose breathers and blocked noses can also cause chest indrawing. If the indrawing persists after the nose is cleared, it indicates a stiff lung.",
+                  "type": "redtext"
+                },
+                {
+                  "id": 1,
+                  "content": "Integrated Management of Childhood Illness (IMCI) training video below from WHO to demonstrate chest indrawing: ",
+                  "type": "text"
+                },
+                {
+                  "id": 2,
+                  "content": "Video",
+                  "type": "link",
+                  "linkUrl": "https://youtu.be/mDw5gMXkc_I"
+                },
+                {
+                  "id": 3,
+                  "content": "The second baby in the video also demonstrates lethargy.",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          {
+            "id": 8,
+            "content": "noisy breathing",
+            "type": "button",
+            "sheet": {
+              "title": "Noisy Breathing",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "Grunting:",
+                  "type": "titletext"
+                },
+                {
+                  "id": 1,
+                  "content": "A grunt at the end of expiration, accompanied by fast breathing indicates a need for oxygen.",
+                  "type": "redtext"
+                },
+                {
+                  "id": 2,
+                  "content": "Video link to Nucleus Medical Media below to demonstrate grunting:",
+                  "type": "text"
+                },
+                {
+                  "id": 3,
+                  "content": "Video",
+                  "type": "link",
+                  "linkUrl": "https://youtu.be/oX3CZnrLxbQ"
+                },
+                {
+                  "id": 4,
+                  "content": "Stridor:",
+                  "type": "titletext"
+                },
+                {
+                  "id": 5,
+                  "content": "It is a noise during inspiration and if severe can be heard during in and expiration. Stridor indicates obstruction between the vocal cords and the large airways. Croup (laryngo-tracheo-bronchitis) is the most common cause for stridor.",
+                  "type": "redtext"
+                },
+                {
+                  "id": 6,
+                  "content": "Wheeze:",
+                  "type": "titletext"
+                },
+                {
+                  "id": 7,
+                  "content": "A noise produced in prolonged expiration only. Bronchiolitis is the most common cause for wheezing in babies and asthma should be considered in older children.",
+                  "type": "redtext"
+                },
+                {
+                  "id": 8,
+                  "content": "Snoring:",
+                  "type": "titletext"
+                },
+                {
+                  "id": 9,
+                  "content": "It indicates obstruction in the nose. If severe it can cause sleep apnoea. Take a video of these episodes to show to your doctor. A tonsillectomy and adenoidectomy may be considered if treatment is not effective.",
+                  "type": "redtext"
+                },
+                {
+                  "id": 10,
+                  "content": "Integrated Management of Childhood Illness (IMCI) training video from WHO below to demonstrate noisy breathing:",
+                  "type": "text"
+                },
+                {
+                  "id": 11,
+                  "content": "Video",
+                  "type": "link",
+                  "linkUrl": "https://youtu.be/mL2PKn6lQ4Y"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 3.6 Danger signs in newborns and young infants; p 52. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 4.1 Child presenting with cough; p 76-79. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "3. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 4.5 Conditions presenting with wheeze; p 91-96. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "4. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 4.7 Conditions presenting with chronic cough; p 109-120. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "5. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 6.1 Stridor and noisy breathing, 6.2 Upper respiratory tract infections, 6.3 Inhaled foreign body, 6.4 Croup, 6.5 Acute asthma, 6.7 Community-acquired pneumonia, Elsevier, cited 2024 Jan.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "6. National Asthma Council Australia. Australian Asthma Handbook, Version 1.2. National Asthma Council Australia, Melbourne, 2016. <http://www.asthmahandbook.org.au>",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "crying",
+    "name": "Crying",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Normal babies cry in response to hunger, discomfort and pain and are usually consolable.",
+            "type": "text"
+          },
+          {
+            "id": 1,
+            "content": "A YouTube video in link below demonstrates how to console a crying baby:",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Video: The Baby Whisperer",
+            "type": "link",
+            "linkUrl": "https://youtu.be/j2C8MkY7Co8"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "colic persists after 4 months of age.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "poor weight gain or feeding difficulty is associated with excessive crying.\n",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "Excessive crying or colic:",
+            "type": "titletext"
+          },
+          {
+            "id": 4,
+            "content": "Crying for no reason for more than 3 hours/day and occurs more than 3 days/week in a healthy thriving infant under 3 months of age.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "The cause is unknown. There are many theories and there could even be more than one contributing factor.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "Excessive crying can be a risk factor for postnatal depression in the mother, early cessation of breastfeeding and non accidental injury.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "Seek help to exclude a cause for the crying and to find support.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 2,
+            "content": "sudden, persistent unconsolable crying occurs.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. MedlinePlus [Internet]. Bethesda (MD): National Library of Medicine (US); Colic and crying, reviewed 2021 Aug, cited 2023 Aug. <https://medlineplus.gov/ency/patientinstructions/000753.htm>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book]Chapter 3.2 The crying infant, Elsevier, cited 2023 Aug.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "development",
+    "name": "Development",
+    "sections": [
+      {
+        "id": "intro",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Track your child’s milestones from the age of 2 months to 5 years with the CDC’s easy-to-use illustrated checklists; get tips from CDC (Centre of Disease Control) on how to encourage your child’s development and find out what to do if you are ever concerned about how your child is developing.",
+            "type": "text"
+          },
+          {
+            "id": 1,
+            "content": "CDC’s Milestone Tracker App:",
+            "type": "titletext"
+          },
+          {
+            "id": 2,
+            "content": "CDC Milestone Tracker App",
+            "type": "link",
+            "linkUrl": "https://www.cdc.gov/ncbddd/actearly/milestones-app.html"
+          },
+          {
+            "id": 3,
+            "content": "From birth to age 5, your child should reach milestones in how he or she plays, learns, speaks, acts, and moves. Photos and videos in this app illustrate each milestone.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "Parent Sense: Baby Care App",
+            "type": "titletext"
+          },
+          {
+            "id": 6,
+            "content": "Baby Sleep & Milestone Tracker",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "Download Parent Sense App",
+            "type": "link",
+            "linkUrl": "https://play.google.com/store/apps/details?id=tech.bitcube.parentsense&pcampaignid=web_share"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "diarrhoea",
+    "name": "Diarrhoea",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Less than 4 watery stools in 24 hours.",
+            "type": "text"
+          },
+          {
+            "id": 1,
+            "content": "No sign of dehydration or any weight loss.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Feeding and drinking well.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "Happy and playful.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Toddler's diarrhoea",
+            "type": "button",
+            "sheet": {
+              "title": "Toddler's diarrhoea",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "Chronic diarrhoea or loose stools in an otherwise healthy young child with no underlying disease.",
+                  "type": "greentext"
+                },
+                {
+                  "id": 1,
+                  "content": "This disorder can present as early as six months of age.",
+                  "type": "text"
+                },
+                {
+                  "id": 2,
+                  "content": "It is characterized by four or more large, painless stools per day, progressing in consistency from semi-solid in the morning to loose as the day progresses.",
+                  "type": "text"
+                },
+                {
+                  "id": 3,
+                  "content": "Stools can contain undigested food and be watery.",
+                  "type": "greentext"
+                },
+                {
+                  "id": 4,
+                  "content": "Intercurrent illness and stressors (excitement) may be triggers for exacerbations that last more than four weeks.",
+                  "type": "text"
+                },
+                {
+                  "id": 5,
+                  "content": "In some children the symptoms appear to be associated with juices or diets high in sugar or carbohydrates and restriction may improve the diarrhoea.",
+                  "type": "text"
+                },
+                {
+                  "id": 6,
+                  "content": "If the toddler is growing well and is otherwise healthy, no diagnostic testing or elimination diet is recommended.",
+                  "type": "greentext"
+                },
+                {
+                  "id": 7,
+                  "content": "The symptoms have a benign course and usually resolve by four to five years of age.",
+                  "type": "text"
+                },
+                {
+                  "id": 8,
+                  "content": "Reference: Martin MG, Thiagarajah JR, Overview of the causes of chronic diarrhoea in children in resource-abundant settings. UpToDate, updated 2023 Mar, cited 2023 Nov.",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          {
+            "id": 5,
+            "content": "If watery stools occur, increase the fluid intake using:\n\n *breastmilk or\n\n *oral rehydration solution (ORS) or\n\n *sugar-salt solution (8 teaspoons of sugar, half teaspoon salt, 1 liter water)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "diarrhoea lasts more than 14 days.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "dairrhoea is caused by certain foods or fluids.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "diarrhoea is associated with recent antibiotic use.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "there is any sign of dehydration.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "child appears lethargic or is sleepy all the time.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "child/baby is not able to drink or has a poor suck.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "child is vomiting everything.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "cold extremities are noticed.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "sunken eyes are present.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "child is irritable and thirsty.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "decrease in skin elasticity (skin pinch) is found.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "fast breathing is present.",
+            "type": "text"
+          },
+          {
+            "id": 10,
+            "content": "heart rate is faster than normal for age (tachycardia).",
+            "type": "text"
+          },
+          {
+            "id": 11,
+            "content": "decrease in urine output is noticed.",
+            "type": "text"
+          },
+          {
+            "id": 12,
+            "content": "sudden weakness or poor neck control presents.",
+            "type": "text"
+          },
+          {
+            "id": 13,
+            "content": "acute weight loss occurs.",
+            "type": "text"
+          },
+          {
+            "id": 14,
+            "content": "blood is seen in the stools.",
+            "type": "text"
+          },
+          {
+            "id": 15,
+            "content": "diarrhoea is associated with fever.",
+            "type": "text"
+          },
+          {
+            "id": 16,
+            "content": "there is significant abdominal pain.",
+            "type": "text"
+          },
+          {
+            "id": 17,
+            "content": "if age is less than 6 months.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 5.2 Acute diarrhoea; p 125-143. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 7.8 Diarrhoea, 7.12 Gastroenteritis, Elsevier, cited 2023 Aug.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "Reference: Martin MG, Thiagarajah JR, Overview of the causes of chronic diarrhoea in children in resource-abundant settings. UpToDate, updated 2023 Mar, cited 2023 Nov.",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ent",
+    "name": "ENT",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Responding to sound.",
+            "type": "text"
+          },
+          {
+            "id": 1,
+            "content": "Normal speech for age.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "3-8 Upper respiratory tract infections/year.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "Teething occurs between 6-24 months.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Geographic tongue",
+            "type": "button",
+            "sheet": {
+                "title": "Geographic Tongue",
+                "sheetContent": [
+                    {
+                        "id": 0,
+                        "content": "tongue",
+                        "type": "image"
+                    },
+                    {
+                        "id": 1,
+                        "content": "Image credit: Wikipedia",
+                        "type": "text"
+                    },
+                    {
+                        "id": 2,
+                        "content": "Also known as benign migratory glossitis.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 3,
+                        "content": "It is a recurrent inflammatory disorder of unknown cause that affects the tongue and sometimes also the mouth.",
+                        "type": "greentext"
+                    },
+                    {
+                        "id": 4,
+                        "content": "On the tongue local loss of papillae leads to red pathes with white borders that give the tongue the appearance of a map.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 5,
+                        "content": "Lesions can change location, pattern, and size very rapidly.",
+                        "type": "greentext"
+                    },
+                    {
+                        "id": 6,
+                        "content": "Patients may have numerous episodes over time.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 7,
+                        "content": "It is usually asymptomatic. Patients may complain of a burning sensation. ",
+                        "type": "greentext"
+                    },
+                    {
+                        "id": 8,
+                        "content": "Usually no treatment is necessary.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 9,
+                        "content": "Reference: Lodi G, Oral lesions, UpToDate, updated 2023 Oct, cited 2023 Nov.",
+                        "type": "text"
+                    }
+                ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "Ears:",
+            "type": "titletext"
+          },
+          {
+            "id": 2,
+            "content": "ear pain and fever occur.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "pus is draining from the ear(s).",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "there is no response to sound.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "there is a foreign body in the ear canal.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "Nose:",
+            "type": "titletext"
+          },
+          {
+            "id": 7,
+            "content": "child has a chronic blocked nose.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "purple-blue shadows beneath the eyes are noted.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "snoring occurs.",
+            "type": "text"
+          },
+          {
+            "id": 10,
+            "content": "unilateral and bad smelling nasal discharge is present.",
+            "type": "text"
+          },
+          {
+            "id": 11,
+            "content": "duration of discharge from the nose is more than 14 days.",
+            "type": "text"
+          },
+          {
+            "id": 12,
+            "content": "recurrent nose bleeds occur.",
+            "type": "text"
+          },
+          {
+            "id": 13,
+            "content": "Mouth and Throat:",
+            "type": "titletext"
+          },
+          {
+            "id": 14,
+            "content": "white patches (thrush) are noted in the mouth.",
+            "type": "text"
+          },
+          {
+            "id": 15,
+            "content": "oral ulcers or mouth sores are present.",
+            "type": "text"
+          },
+          {
+            "id": 16,
+            "content": "baby is struggling with sucking from the breast or bottle.",
+            "type": "text"
+          },
+          {
+            "id": 17,
+            "content": "tongue tie",
+            "type": "button",
+            "sheet": {
+                "title": "Tongue Tie / Ankyloglossia",
+                "sheetContent": [
+                    {
+                        "id": 0,
+                        "content": "ankyloglossia",
+                        "type": "image"
+                    },
+                    {
+                        "id": 1,
+                        "content": "Image credit: Wikipedia",
+                        "type": "text"
+                    },
+                    {
+                        "id": 2,
+                        "content": "Tongue tie is a condition of limited tongue mobility caused by a restrictive lingual frenulum.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 3,
+                        "content": "It can cause difficulty lifting, protruding and moving the tongue from side to side.",
+                        "type": "greentext"
+                    },
+                    {
+                        "id": 4,
+                        "content": "It causes a notched or heart shaped tongue when protruded.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 5,
+                        "content": "Seek help if tongue tie:\n\n*is causing breastfeeding problems not responding to lactation support.\n\n*if a tongue tie causes speech problems not responding to speech therapy.",
+                        "type": "greentext"
+                    },
+                    {
+                        "id": 6,
+                        "content": "The doctor may consider clipping the tongue tie (frenotomy).",
+                        "type": "text"
+                    },
+                    {
+                        "id": 7,
+                        "content": "A tongue tie will not cause speech delay.",
+                        "type": "redtext"
+                    },
+                    {
+                        "id": 8,
+                        "content": "Reference: Isaacson, G, Ankyloglossia (tongue-tie) in infants and children, UpToDate, updated 2023 May, cited 2023 Oct.",
+                        "type": "text"
+                    }
+                ]
+            }
+          },
+          {
+            "id": 18,
+            "content": "throat or swallowing is painful.",
+            "type": "text"
+          },
+          {
+            "id": 19,
+            "content": "a rash combined with a sore throat and red tongue are noted.",
+            "type": "text"
+          },
+          {
+            "id": 20,
+            "content": "bleeding from the mouth is present.",
+            "type": "text"
+          },
+          {
+            "id": 21,
+            "content": "drooling persists after 5 years of age.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "Ears:",
+            "type": "titletext"
+          },
+          {
+            "id": 2,
+            "content": "there is a tender, red swelling behind the ear.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "severe ear pain is experienced.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Nose:",
+            "type": "titletext"
+          },
+          {
+            "id": 5,
+            "content": "duration of nasal bleeding is more than 30 minutes despite pressure applied.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "Throat:",
+            "type": "titletext"
+          },
+          {
+            "id": 7,
+            "content": "child can not swallow anything.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 2,
+            "content": "1. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 14.1 The Ear, 14.2 The nose, 14.3 The mouth and throat, Elsevier, cited 2023 Aug.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "2. Leung AKC, Kao CP, Drooling in children, Paediatr Child Health. 1999 Sep; 4(6): 406-411. doi: 10.1093/pch/4.6.406",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "eyes",
+    "name": "Eyes",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Normal eyes in a child are symmetrical in size and movement, shiny, not red and with no discharge.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "eyes are red and/or itchy with/without discharge.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "a painless swelling of the eyelid is noticed.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "eyes are asymmetrical in size and movement.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "jerking movements of the eye (nystagmus) are noticed.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "eyelid covers the pupil (ptosis) when the child is awake.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "a persistent squint (strabismus) is present.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "an intermittent squint persists after 4 months of age.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "baby does not track people and objects as they move.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if the following present: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "A single red eye with/without pain.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Any eye injury.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "Acute swelling, redness and pain of tissue around the eye.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Sudden vision loss.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "White pupils",
+            "type": "button",
+            "sheet": {
+              "title": "White pupils",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "cataracts",
+                  "type": "image"
+                },
+                {
+                  "id": 1,
+                  "content": "White pupils with absent red reflexes caused by cataracts.",
+                  "type": "text"
+                },
+                {
+                  "id": 2,
+                  "content": "redreflex",
+                  "type": "image"
+                },
+                {
+                  "id": 3,
+                  "content": "Red reflexes can normally be seen on photos especially if a flash light was used.",
+                  "type": "text"
+                },
+                {
+                  "id": 4,
+                  "content": "absentredreflex",
+                  "type": "image"
+                },
+                {
+                  "id": 5,
+                  "content": "Absent red reflex in the left eye. Referral to an opthalmologist will be necessary to determine the cause.",
+                  "type": "text"
+                },
+                {
+                  "id": 6,
+                  "content": "Credit for images: Wikipedia",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          {
+            "id": 6,
+            "content": "Hazy enlarged eye/s",
+            "type": "button",
+            "sheet": {
+              "title": "Glaucoma",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "glaucoma",
+                  "type": "image"
+                },
+                {
+                  "id": 1,
+                  "content": "Image credit: Wikipedia",
+                  "type": "text"
+                },
+                {
+                  "id": 2,
+                  "content": "Hazy and enlarged eye caused by increased pressure in the eye. Urgent treatment is necessary.",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          {
+            "id": 7,
+            "content": "Sunset eyes",
+            "type": "button",
+            "sheet": {
+              "title": "Hydrocephallus",
+              "sheetContent": [
+                {
+                  "id": 0,
+                  "content": "sunseteyes",
+                  "type": "image"
+                },
+                {
+                  "id": 1,
+                  "content": "Image credit: Wikipedia",
+                  "type": "text"
+                },
+                {
+                  "id": 2,
+                  "content": "Sunset eyes can be a sign of increased fluid in the brain. The head is larger than normal and anterior fontanel may be bulging.",
+                  "type": "text"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 3.12.2 Conjunctivitis; p 66-67. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 13.1 Opthalmological emergencies, Chapter 13.2 Congenital, developmental and neoplastic conditions of the eye, Chapter 13.3 Ocular trauma, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fever",
+    "name": "Fever",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Normal temperature is between 36.5 - 37.5°C.",
+            "type": "text"
+          },
+          {
+            "id": 1,
+            "content": "Rectal temperature is the most accurate.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "An infrared thermal scanner is less accurate, but can be used as an alternative.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "A fever within 48 hours after immunisation can be normal.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Children can experience 4-6 mild febrile episodes in the first 2 years of life.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if:",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "a fever is present for more than 3 days.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "baby is less than 3 months old.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "any skin rash is noted with/without red eyes.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "a bulging fontanel is present.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "child is complaining of a stiff neck or severe headache.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "convulsions/seizures occur.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "child is sleepy, lethargic, confused or unconscious.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "child is refusing to take any fluids or feeds.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "body is hot but the extremities are feeling cold.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "child is still looking unwell after medication for fever was given.",
+            "type": "text"
+          },
+          {
+            "id": 10,
+            "content": "there is an underlying medical condition or the immune system is compromised.",
+            "type": "text"
+          },
+          {
+            "id": 11,
+            "content": "child has a central venous device or a shunt.",
+            "type": "text"
+          },
+          {
+            "id": 12,
+            "content": "any recent travelling to an area where malaria is present, occurred.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 3.6 Danger signs in newborns and young infants; p 52. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 3.10.4 High fever; p 58. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "3. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 6.1 Child presenting with fever; p 150-156. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "4. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 9.1 Infectious diseases, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "growth",
+    "name": "Growth",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Normal weight for age: View in landscape mode.",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "weight",
+            "type": "image"
+          },
+          {
+            "id": 2,
+            "content": "MUAC:",
+            "type": "titletext"
+          },
+          {
+            "id": 3,
+            "content": "Normal Mid-Upper Arm Circumference (MUAC) 6 months - 5 years is more than 12.5 cm.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "MUAC Training Video",
+            "type": "link",
+            "linkUrl": "https://www.youtube.com/watch?v=cGWtRRNveLc"
+          },
+          {
+            "id": 5,
+            "content": "Growth Charts:",
+            "type": "titletext"
+          },
+          {
+            "id": 6,
+            "content": "Growth Charts",
+            "type": "link",
+            "linkUrl": "https://www.cdc.gov/growthcharts/index.htm"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "no or poor weight gain (failure to thrive) is noted.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "mid arm circumference is between 11.5 - 12.5 cm. (6 - 60 months)",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "child is losing weight.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "mid arm circumference is less than 11.5 cm. (6 - 60 months)",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "oedema/swelling of the feet develops.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+            {
+              "id": 0,
+              "content": "References: ",
+              "type": "titletext"
+            },
+            {
+                "id": 1,
+                "content": "1. KidsHealth [Internet]. Nemours Children’s Health. Growth Charts; reviewed 2019 Aug; cited 2023 Oct. <https://kidshealth.org/en/parents/growth-charts.html>" ,
+                "type": "text"
+            },
+            {
+                "id": 2,
+                "content": "2. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed..  Severe Acute Malnutrition; p 197-199, Annex 5 Assessing nutritional status; p 379-391. <https://apps.who.int/iris/handle/10665/81170>" ,
+                "type": "text"
+            },
+            {
+                "id": 3,
+                "content": "3. Mayo Clinic [Internet]. Infant and toddler health. How much should I expect my baby to grow in the first year? ; reviewed 2023 Jan; cited 2023 Aug. < https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/expert-answers/infant-growth/faq-20058037#:~:text=Height.,(1.3%20centimeters)%20each%20month.>" ,
+                "type": "text"
+            },
+            {
+                "id": 4,
+                "content": "4. Centers for Disease Control and Prevention [Internet]. National Center for Health Statistics: Growth Charts; reviewed 2022 Dec; cited 2023 Oct. <https://www.cdc.gov/growthcharts/index.htm>" ,
+                "type": "text"
+            }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gut",
+    "name": "Gut",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Reflux (vomitting after milk feeds) in a healthy, happy and thriving baby up to 18 months can be normal. No medication is required.",
+            "type": "text"
+          },
+          {
+            "id": 1,
+            "content": "Soft stools are normal and the frequency is less important.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "The stools of exclusively breastfed babies can be loose and even watery. Wet nappies will indicate adequate hydration.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "The colour of stools can be green or yellow if transit time through the gut is fast.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "vomitting/reflux is causing weight loss or failure to thrive.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "reflux is causing coughing and lung infections.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "onset of reflux is after 6 months of age and if reflux persists after 18 months.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "a swelling in the groin is seen. It could indicate an inguinal hernia.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "child is not toilet trained by 4 years.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "persistent or recurrent abdominal pain occurs.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "persistent abdominal distention (swelling) is seen.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "constipation",
+            "type": "button",
+            "sheet": {
+                "title": "Constipation",
+                "sheetContent": [
+                    {
+                        "id": 0,
+                        "content": "stools",
+                        "type": "image"
+                    },
+                    {
+                        "id": 1,
+                        "content": "Image credit: University of Bristol",
+                        "type": "text"
+                    },
+                    {
+                        "id": 2,
+                        "content": "Type 1 - Severe constipation",
+                        "type": "redtext"
+                    },
+                    {
+                        "id": 3,
+                        "content": "Type 2 - Mild constipation.",
+                        "type": "redtext"
+                    },
+                    {
+                        "id": 4,
+                        "content": "Type 3 - 4 Normal stools.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 5,
+                        "content": "Only type 1 and 2 need treatment. If the child is passing normal stools once a week no treatment is necessary.",
+                        "type": "text"
+                    }
+                ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "yellow or green vomitting is seen.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "projectile vomitting occurs.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "blood in the stools is noticed.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "there is an inability to swallow.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "child suffers from severe abdominal pain.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 7.2 Vomiting, 7.3 Gastrointestinal bleeding, 7.4 Gastro-oesophageal reflux, 7.13 Constipation, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. Isaacson, G, Ankyloglossia (tongue-tie) in infants and children, UpToDate, updated 2023 May, cited 2023 Oct.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "3. Lodi G, Oral lesions, UpToDate, updated 2023 Oct, cited 2023 Nov.",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "heart",
+    "name": "Heart",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Normal sleeping pulse for age:\n\n* 0-1 year 90-160/min\n* 1-3 years 80-120/min\n* 3-5 years 65-100/min",
+            "type": "text"
+          },
+          {
+            "id": 1,
+            "content": "Oxygen saturation above 90% is normal.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "child is always tired and feeding poorly from the breast or bottle.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "pulse rate for age is persistently higher or lower than normal for age.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "child is experiencing palpitations.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "an irregular pulse is present.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "episodes of fainting occur.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "fatigue and exercise intolerance are present.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "persistent fast breathing more than 40/min is noted.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "joint pain, fever and a fast heart rate occur.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "there is a family history of sudden or premature death in children or young adults.",
+            "type": "text"
+          },
+          {
+            "id": 10,
+            "content": "recurrent or persistent chest pain is experienced.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "there is no heartbeat (Do CPR).",
+            "type": "text"
+          },
+          {
+              "id": 2,
+              "content": "CPR Training Video",
+              "type": "link",
+              "linkUrl": "https://www.rch.org.au/cocoon/project/moving-on/Family_resuscitation_training_videos/"
+          },
+          {
+            "id": 3,
+            "content": "lips and tongue are turning blue (cyanosis).",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "oxygen saturation is below 90%.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "pulse is persistently more than 160/min.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "pulse is persistently less than 60/min.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "no femoral pulse is palpable in the groin.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "oedema or swelling of the feet or the eyelids is present.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "unexplained prolonged fever for more than 4 days, skin rash and red eyes are noted.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. World Health Organization. (‎2013)‎. Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. World Health Organization. Section 4.8 Heart failure; p 120-121. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 5.4 Cyanotic heart disease and tetralogy of Fallot spells, 5.6 Congenital heart disease, Elsevier, cited 2023 Aug. <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "3. American Heart Association. (2016). Pediatric Advanced Life Support Provider Manuel. (‎2016)‎.Normal sleeping pulse for age; p 48.",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kidneys genitals",
+    "name": "Kidneys Genitals",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Normal bladder control occurs by 4 years and final continence should be achieved by 5-7 years.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "repeated urine tract infections occur. An underlying abnormality of the urine tract must be excluded.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "labia of vagina are fused.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "pubic hair is seen before 8 years of age in a girl and before 9 years in a boy.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "narrowing of the opening of the foreskin (phimosis) is noted.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "blood in the urine is noted.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "a burning sensation or pain with urination occurs.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "a fever of unknown cause is present. An urine tract infection must be excluded.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "there is an inability to urinate or lack of urine output is observed.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "a painful and/or enlarged scrotum is noted.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "the foreskin of the penis becomes trapped behind the head of the penis (paraphimosis). It can cause a decrease in blood supply to the head of the penis.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "vaginal bleeding or discharge occurs.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "vaginal pain is experienced.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 15.1 Paediatric gynaecology, 16.2 Haematuria, 26.1 Male genitalia, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. Nepple, KG, Cooper, CS. Etiology and clinical features of bladder dysfunction in children, UpToDate, updated 2023 Apr, cited 2023 Oct.",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "movement",
+    "name": "Movement",
+    "sections": [
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Moving all 4 limbs independently with equal and normal strength and range of movement.",
+            "type": "text"
+          },
+          {
+            "id": 1,
+            "content": "Growing pains",
+            "type": "button",
+            "sheet": {
+                "title": "Growing pains",
+                "sheetContent": [
+                    {
+                        "id": 0,
+                        "content": "Clinical features and Epidemiology:",
+                        "type": "titletext"
+                    },
+                    {
+                        "id": 1,
+                        "content": "Recurrent, self-limited episodes of limb pain,",
+                        "type": "text"
+                    },
+                    {
+                        "id": 2,
+                        "content": "affecting both lower extremities,",
+                        "type": "greentext"
+                    },
+                    {
+                        "id": 3,
+                        "content": "in children 3-12 years old,",
+                        "type": "text"
+                    },
+                    {
+                        "id": 4,
+                        "content": "occur late in the day and frequently awakens the child during the night,",
+                        "type": "greentext"
+                    },
+                    {
+                        "id": 5,
+                        "content": "there are no musculoskeletal abnormalities,",
+                        "type": "text"
+                    },
+                    {
+                        "id": 6,
+                        "content": "these pains do not affect usual activities and function,",
+                        "type": "greentext"
+                    },
+                    {
+                        "id": 7,
+                        "content": "and children are otherwise healthy.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 8,
+                        "content": "Cause:",
+                        "type": "titletext"
+                    },
+                    {
+                        "id": 9,
+                        "content": "Unknown",
+                        "type": "text"
+                    },
+                    {
+                        "id": 10,
+                        "content": "Management:",
+                        "type": "titletext"
+                    },
+                    {
+                        "id": 11,
+                        "content": "Heat, massage, muscle stretches, analgesics (pain medication).",
+                        "type": "text"
+                    },
+                    {
+                        "id": 12,
+                        "content": "For children who awaken at night due to pain with a predictable pattern, preventative administration of analgesics before bedtime can be used.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 13,
+                        "content": "Prognosis:",
+                        "type": "titletext"
+                    },
+                    {
+                        "id": 14,
+                        "content": "Prognosis is good, with a decrease in pain episodes over time with and should settle early in second decade of life.",
+                        "type": "greentext"
+                    },
+                    {
+                        "id": 15,
+                        "content": "Reference: Hashkes, PJ, Growing pains. UpToDate. updated 2023 Jun, cited 2023 Oct.",
+                        "type": "text"
+                    }
+                ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "abnormal gait for age is noted.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "spasticity or stiffness of joints is present.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "child suffers from persistent back pain.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "pain and stiffness of the joints are experienced in the morning.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "child is older than 18 months and not walking.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "bow legs (genu varum) persist after 3 years of age.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "child is not moving or unable to move a limb.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "sudden weakness occurs.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "pain, swelling or redness in a limb or joint is noted.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "acute limp with or without pain is seen.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "persistent pain in a joint or limb after an injury occurs.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "floppy/weak",
+            "type": "button",
+            "sheet": {
+                "title": "Floppy/weak",
+                "sheetContent": [
+                    {
+                        "id": 0,
+                        "content": "It is also known as hypotonia, with many different causes originating from the brain, nerves or the muscles.",
+                        "type": "text"
+                    },
+                    {
+                        "id": 1,
+                        "content": "At 2 months babies should be able to lift their heads if lying on their stomachs and there should be head control when kept in a sitting position. Babies should be able to lift their limbs from a surface when lying on their backs.",
+                        "type": "redtext"
+                    },
+                    {
+                        "id": 2,
+                        "content": "Video link to CureSMA below demonstrating a floppy baby with weakness and hypotonia:",
+                        "type": "text"
+                    },
+                    {
+                        "id": 3,
+                        "content": "Video",
+                        "type": "link",
+                        "linkUrl": "https://youtu.be/pZHhAcSrFIY"
+                    },
+                    {
+                        "id": 4,
+                        "content": "A health worker should confirm the signs and symptoms and a referral to a specialist may be necessary to determine the cause.",
+                        "type": "redtext"
+                    }
+                ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book]Chapter 8.4 Acute weakness, 25.1 Orthopaedics and rheumatology, 25.2 Child with a limp, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. Cleveland Clinic [Internet]. Cerebral Palsy; reviewed 2020 Dec; cited 2023 Aug. <https://my.clevelandclinic.org/health/diseases/8717-cerebral-palsy>",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "3. Rosenfeld, SB, Approach to the child with bow-legs, UpToDate, updated 2023 Aug, cited 2023 Oct.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "4. Hashkes, PJ, Growing pains, UpToDate, updated 2023 Jun, cited 2023 Oct.",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "other",
+    "name": "Other",
+    "sections": [
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "breath holding spells occur after crying or pain. Face can turn blue or pale. Take a video of an episode.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "pale hand palms are present.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "child is always tired.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "child vomits every morning, especially if combined with a headache.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "child is woken up by a headache.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "recurrent nose bleeds occur.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "a lump or swelling is noted.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "enlarged lymphnodes are noted.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "an allergic reaction occurs causing diarrhoea, vomitting or blood in the stools.",
+            "type": "text"
+          },
+          {
+            "id": 10,
+            "content": "extreme restlessness and sleeping problems occur.",
+            "type": "text"
+          },
+          {
+            "id": 11,
+            "content": "delayed speech and avoidance of eye contact are noted.",
+            "type": "text"
+          },
+          {
+            "id": 12,
+            "content": "repetitive movements like twirling and hand clapping occur.",
+            "type": "text"
+          },
+          {
+            "id": 13,
+            "content": "severe anxiety is experienced by the child.",
+            "type": "text"
+          },
+          {
+            "id": 14,
+            "content": "episodes of severe aggression occur.",
+            "type": "text"
+          },
+          {
+            "id": 15,
+            "content": "hallucinations are noted.",
+            "type": "text"
+          },
+          {
+            "id": 16,
+            "content": "weight loss and night sweats occur.",
+            "type": "text"
+          },
+          {
+            "id": 17,
+            "content": "child is living in the same household or is in frequent contact with a person diagnosed with tuberculosis.",
+            "type": "text"
+          },
+          {
+            "id": 18,
+            "content": "a parent is HIV positive.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "child is vomitting everything.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "child is excessively sleepy, lethargic or unconscious.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "convulsions/seizures occur.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "jaundice (yellowing of the skin or the white of the eyes) is noted.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "persistent bleeding with failure to clot occurs.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "large haematomas or bruises develop after minor injuries.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "severe thirst with increased urine output is noted.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "an allergic reaction is causing respiratory problems.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "you feel you can not cope with your baby or child.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 5.3 Syncopy, 11.2 Anaemia, 11.3 Disorders of coagulation, 11.4 Platelet disorders, 11.6 Acute leukemia, 17.1 Paediatric psychiatric emergencies, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "2. Integrated Management of Childhood Illness, Chart Booklet, WHO March 2014; p 1. <https://cdn.who.int/media/docs/default-source/mca-documents/child/imci-integrated-management-of-childhood-illness/imci-in-service-training/imci-chart-booklet.pdf?sfvrsn=f63af425_1>",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "skin",
+    "name": "Skin",
+    "sections": [
+      {
+        "id": "intro",
+        "background": "gray",
+        "content": [
+          {
+            "id": 0,
+            "content": "Please first check the following websites to identify your child's rash:",
+            "type": "redtext"
+          },
+          {
+            "id": 1,
+            "content": "NHS - UK",
+            "type": "link",
+            "linkUrl": "https://www.nhs.uk/conditions/rashes-babies-and-children/"
+          },
+          {
+            "id": 2,
+            "content": "NI Direct - Northern Ireland",
+            "type": "link",
+            "linkUrl": "https://www.nidirect.gov.uk/conditions/skin-rashes-babies"
+          },
+          {
+            "id": 3,
+            "content": "Baby Centre - UK",
+            "type": "link",
+            "linkUrl": "https://www.babycentre.co.uk/l1038755/childhood-rashes-skin-conditions-and-infections-photos"
+          },
+          {
+            "id": 4,
+            "content": "Avoid petroleum jelly. It may cause a dermatitis or skin rash.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Self limiting rashes that do not need any treatment:",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "Uncomplicated insect bites",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Heat rash",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "Hand, foot and mouth disease",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Molluscum contagiosum",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "orange",
+        "background": "orange",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek help if any of the following present: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "Cradle cap (seborrhoeic dermatitis)",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Eczema",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "Severe nappy rash",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Ringworm",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "Scabies",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "Head lice",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "Large haemangioma (strawberry nevus)",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "Acne (abnormal before puberty)",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "More than 5 brown spots (cafe au-lait macules) larger than 5 mm",
+            "type": "text"
+          },
+          {
+            "id": 10,
+            "content": "Rash around the eyes",
+            "type": "text"
+          },
+          {
+            "id": 11,
+            "content": "Hyper or hypopigmentation of the skin or hair",
+            "type": "text"
+          },
+          {
+            "id": 12,
+            "content": "Abnormal nails or teeth",
+            "type": "text"
+          },
+          {
+            "id": 13,
+            "content": "Hair loss",
+            "type": "text"
+          },
+          {
+            "id": 14,
+            "content": "Severe warts or other skin growths",
+            "type": "text"
+          },
+          {
+            "id": 15,
+            "content": "Sacral dimple on the spine above the buttocks. Most sacral dimples are normal.",
+            "type": "text"
+          },
+          {
+            "id": 16,
+            "content": "Herpes lesions/cold sores on the lip",
+            "type": "text"
+          },
+          {
+            "id": 17,
+            "content": "Unknown rash",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if any of the following present: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "A rash combined with a fever",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Petigiae or purpura (bruising)",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "Chickenpox or herpes lesions close to the eyes",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Hives especially in the face",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "Cellulitis",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "Impetigo",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "Peeling or scaling skin",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "Large blisters filled with clear fluid or pus",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "Red rash involving the palms of the hands or soles of the feet",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "Reference: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 12.1 Dermatology, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "trauma",
+    "name": "Trauma",
+    "sections": [
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Seek immediate help if: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "you feel you are going to harm your baby or child.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "loss of consciousness or altered mental state after a head injury occurs. A possible neck injury must also be excluded.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "a spinal injury is suspected after trauma.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "breathing difficulty is experienced after chest trauma.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "abdominal pain is present after trauma.",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "poisoning is suspected.",
+            "type": "text"
+          },
+          {
+            "id": 7,
+            "content": "your child ingested a possible harmful substance.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "ingestion of batteries or magnets occurred.",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "a snake bites your child.",
+            "type": "text"
+          },
+          {
+            "id": 10,
+            "content": "a bee sting causing collapse, swelling or respiratory problems occurred.",
+            "type": "text"
+          },
+          {
+            "id": 11,
+            "content": "a scorpion sting or spider bite causes any symptoms.",
+            "type": "text"
+          },
+          {
+            "id": 12,
+            "content": "child is bitten by an animal. Rabies and tetanus vaccination must be considered.",
+            "type": "text"
+          },
+          {
+            "id": 13,
+            "content": "a human bite especially to the hands occurred.",
+            "type": "text"
+          },
+          {
+            "id": 14,
+            "content": "any burn larger than the child's hand palm occurred. Cool the burn immediately with water.",
+            "type": "text"
+          },
+          {
+            "id": 15,
+            "content": "child has severe sunburn or heat stroke is suspected.",
+            "type": "text"
+          },
+          {
+            "id": 16,
+            "content": "an inhalation injury is suspected.",
+            "type": "text"
+          },
+          {
+            "id": 17,
+            "content": "choking occurred. If a foreign body is still causing obstruction, remove foreign body with the Heimlich maneuver.",
+            "type": "text"
+          },
+          {
+              "id": 18,
+              "content": "Heimlich maneuver",
+              "type": "link",
+              "linkUrl": "https://www.youtube.com/watch?v=aXaLc-AwX2g"
+          },
+          {
+            "id": 19,
+            "content": "an electrical injury or shock occurred.",
+            "type": "text"
+          },
+          {
+            "id": 20,
+            "content": "a near drowning occurred. Breathing must first be re-established with CPR.",
+            "type": "text"
+          },
+          {
+              "id": 21,
+              "content": "CPR and Choking Training Video",
+              "type": "link",
+              "linkUrl": "https://www.rch.org.au/cocoon/project/moving-on/Family_resuscitation_training_videos/"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 4.2 Paediatric neurotrauma, 4.3 Spinal injury, 4.4 Thoracic injuries in childhood, 4.5 Abdominal and pelvic trauma, 4.6 Burns, 4.8 Wound management, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sources",
+    "name": "Sources",
+    "sections": [
+      {
+        "id": "intro",
+        "background": "gray",
+        "content": [
+          {
+            "id": 0,
+            "content": "WHO Pocket Book (download link)",
+            "type": "link",
+            "linkUrl": "https://apps.who.int/iris/handle/10665/81170"
+          },
+          {
+            "id": 1,
+            "content": "UNICEF: Newborn-baby-health",
+            "type": "link",
+            "linkUrl": "https://www.unicef.org/parenting/health/newborn-baby-health"
+          },
+          {
+            "id": 2,
+            "content": "WHO: Newborn-health",
+            "type": "link",
+            "linkUrl": "https://www.who.int/health-topics/newborn-health#tab=tab_1"
+          },
+          {
+            "id": 3,
+            "content": "WHO: Integrated Management of Childhood Illness",
+            "type": "link",
+            "linkUrl": "https://www.who.int/teams/maternal-newborn-child-adolescent-health-and-ageing/child-health/integrated-management-of-childhood-illness#:~:text=IMCI%20is%20an%20integrated%20approach,under%20five%20years%20of%20age."
+          },
+          {
+            "id": 4,
+            "content": "WHO: Vaccines and Immunization",
+            "type": "link",
+            "linkUrl": "https://www.who.int/health-topics/vaccines-and-immunization#tab=tab_1"
+          },
+          {
+            "id": 5,
+            "content": "American Academy of Pediatrics: healthychildren.org",
+            "type": "link",
+            "linkUrl": "https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx"
+          },
+          {
+            "id": 6,
+            "content": "UK - NHS: Baby",
+            "type": "link",
+            "linkUrl": "https://www.nhs.uk/conditions/baby/"
+          },
+          {
+            "id": 7,
+            "content": "Australia: Babies and Toddlers Health",
+            "type": "link",
+            "linkUrl": "https://www.healthdirect.gov.au/babies-and-toddlers-health"
+          },
+          {
+            "id": 8,
+            "content": "UK - National Childbirth Trust",
+            "type": "link",
+            "linkUrl": "https://www.nct.org.uk/baby-toddler/your-babys-health"
+          },
+          {
+            "id": 9,
+            "content": "Paediatric Emergency Medicine (archive.org)",
+            "type": "link",
+            "linkUrl": "https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf"
+          }
+        ]
+      },
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Keeping Babies Safe: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "OPENPediatrics: Keeping babies safe",
+            "type": "link",
+            "linkUrl": "https://www.youtube.com/playlist?list=PLJmgkNI4ruzwqsiFTOhW6ePdlWjsS112L"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "privacy",
+    "name": "Privacy",
+    "sections": [
+      {
+        "id": "intro",
+        "background": "gray",
+        "content": [
+          {
+            "id": 0,
+            "content": "Please check the supporting website https://childhealthforall.com to read the Privacy Policy for this App:",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "www.childhealthforall.com",
+            "type": "link",
+            "linkUrl": "https://childhealthforall.com"
+          }
+        ]
+      },
+      {
+        "id": "green",
+        "background": "green",
+        "content": [
+          {
+            "id": 0,
+            "content": "Please contact developer if you have any comments or suggestions:",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "doctor@childhealthforall.com",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+]
