@@ -7,6 +7,7 @@ enum class TypeSelected (
     TEXT("text"),
     TITLE_TEXT("titletext"),
     RED_TEXT("redtext"),
+    GREEN_TEXT("greentext"),
     LINK("link"),
     BUTTON("button")
 }

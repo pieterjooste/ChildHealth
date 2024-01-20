@@ -22,7 +22,6 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModel
 import com.childhealth.destinations.SheetScreenDestination
 import com.childhealth.extensions.getResourceIdentifier
-import com.childhealth.extensions.getResourceIdentifier
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 class ScreenViewModel: ViewModel() {
@@ -62,8 +61,8 @@ class ScreenViewModel: ViewModel() {
                     painter = painterResource(id = content.getResourceIdentifier(LocalContext.current)),
                     contentDescription = "$content",
                     modifier = Modifier
-                        .padding(8.dp)
-                        .clip(RoundedCornerShape(30.dp)),
+                        .padding(12.dp)
+                        .clip(RoundedCornerShape(10.dp)),
                     contentScale = ContentScale.Fit
                 )
             }
@@ -81,6 +80,18 @@ class ScreenViewModel: ViewModel() {
                     modifier = Modifier
                         .background(
                             Color.Red,
+                            shape = RoundedCornerShape(10.dp)
+                        )
+                        .padding(8.dp)
+                )
+            }
+
+            TypeSelected.GREEN_TEXT.stringValue -> {
+                Text(
+                    text = content,
+                    modifier = Modifier
+                        .background(
+                            Color(0xFF4CD964),
                             shape = RoundedCornerShape(10.dp)
                         )
                         .padding(8.dp)

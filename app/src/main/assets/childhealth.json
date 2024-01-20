@@ -32,7 +32,7 @@
             "content": "Sleep terrors",
             "type": "button",
             "sheet": {
-              "title": "Sleep/Night Terrors",
+              "title": "Night Terrors",
               "sheetContent": [
                 {
                   "id": 0,
@@ -1402,7 +1402,7 @@
           },
           {
             "id": 3,
-            "content": "Acute swelling, redness and pain of tissue around the eye.",
+            "content": "Acute pain, redness and swelling of tissue around the eye.",
             "type": "text"
           },
           {
@@ -1695,12 +1695,12 @@
         "content": [
           {
             "id": 0,
-            "content": "Normal weight for age: View in landscape mode.",
+            "content": "Normal weight for age:",
             "type": "titletext"
           },
           {
             "id": 1,
-            "content": "weight",
+            "content": "weights",
             "type": "image"
           },
           {

@@ -64,13 +64,15 @@ fun IntroScreen(onContinue: () -> Unit) {
 
             Text(
                 text = """
-                        ☉ These guidelines will not cover all conditions that may need medical help.
+                         ☉These guidelines will not cover all conditions that may need medical help.
                             
-                        ☉ Premature babies are not covered by these guidelines.
+                         ☉All children should have regular weight checks and their growth charts must be updated.
                             
-                        ☉ All healthy babies should be seen by a health worker immediately after birth, 2-3 days after delivery and at 6 weeks for a routine assessment.
-                           
-                        ☉ The mother's mental as well as physical health is very important for a baby's health.   
+                         ☉All children must follow their country's immunisation schedule.
+                            
+                         ☉Exclusive breastfeeding is recommended for the first 6 months of life.
+                            
+                         ☉The mother's mental and physical well being is very important for the baby's health.  
                     """.trimIndent(),
                 modifier = Modifier
                     .padding(bottom = 16.dp)

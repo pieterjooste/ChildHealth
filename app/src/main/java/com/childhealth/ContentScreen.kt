@@ -96,7 +96,7 @@ fun ContentScreen(navigator: DestinationsNavigator) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Baby Health 0-2 Months",
+                text = "Child Health 2-60 Months",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.ExtraBold,
                 modifier = Modifier
@@ -135,7 +135,7 @@ fun ContentScreen(navigator: DestinationsNavigator) {
                         Text (
                             text = topic.name,
                             textAlign = TextAlign.Center,
-                            fontSize = 18.sp,
+//                            fontSize = 18.sp,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier
                                 .fillMaxWidth()

@@ -90,9 +90,10 @@ fun CompactLayout() {
             painter = painterResource(id = R.drawable.hands),
             contentDescription = null,
             modifier = Modifier
+                .fillMaxWidth(0.7f)
                 .padding(20.dp)
                 .clip(RoundedCornerShape(30.dp)),
-            contentScale = ContentScale.Inside
+ //           contentScale = ContentScale.Fit
         )
 
         Text("When to Seek Help",
@@ -108,10 +109,10 @@ fun CompactLayout() {
             painter = painterResource(id = R.drawable.developer),
             contentDescription = null,
             modifier = Modifier
-                //              .size(200.dp)
+                .fillMaxWidth(0.5f)
                 .padding(20.dp)
                 .clip(RoundedCornerShape(30.dp)),
-            contentScale = ContentScale.Inside
+//            contentScale = ContentScale.Fit
         )
     }
 }
@@ -142,9 +143,10 @@ fun ExpandedLayout() {
                     painter = painterResource(id = R.drawable.hands),
                     contentDescription = null,
                     modifier = Modifier
+                        .fillMaxWidth(0.5f)
                         .padding(8.dp)
                         .clip(RoundedCornerShape(30.dp)),
-                    contentScale = ContentScale.Fit
+//                    contentScale = ContentScale.Fit
                 )
             }
 
@@ -159,9 +161,10 @@ fun ExpandedLayout() {
                     painter = painterResource(id = R.drawable.developer),
                     contentDescription = null,
                     modifier = Modifier
+                        .fillMaxWidth(0.5f)
                         .padding(8.dp)
                         .clip(RoundedCornerShape(30.dp)),
-                    contentScale = ContentScale.Fit
+//                    contentScale = ContentScale.Fit
                 )
             }
         }
