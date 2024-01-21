@@ -31,7 +31,6 @@ import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.sp
 import com.childhealth.destinations.SendEmailScreenDestination
 import com.childhealth.destinations.ShareScreenDestination
 import com.childhealth.destinations.TopicScreenDestination
@@ -135,7 +134,6 @@ fun ContentScreen(navigator: DestinationsNavigator) {
                         Text (
                             text = topic.name,
                             textAlign = TextAlign.Center,
-//                            fontSize = 18.sp,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier
                                 .fillMaxWidth()

@@ -992,7 +992,7 @@
   },
   {
     "id": "ent",
-    "name": "ENT",
+    "name": "Ear Nose Throat",
     "sections": [
       {
         "id": "green",
@@ -1174,7 +1174,7 @@
             "content": "tongue tie",
             "type": "button",
             "sheet": {
-                "title": "Tongue Tie / Ankyloglossia",
+                "title": "Tongue Tie",
                 "sheetContent": [
                     {
                         "id": 0,

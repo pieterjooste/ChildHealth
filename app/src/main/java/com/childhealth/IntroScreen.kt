@@ -59,7 +59,7 @@ fun IntroScreen(onContinue: () -> Unit) {
             )
 
             Text(
-                text ="☉ Disclaimer: These are guidelines only and not medical advice. Ill babies should be seen by a trained health worker.\n\n"
+                text ="☉ Disclaimer: These are guidelines only and not medical advice. Ill children should be seen by a trained health worker.\n\n"
             )
 
             Text(
@@ -72,7 +72,7 @@ fun IntroScreen(onContinue: () -> Unit) {
                             
                          ☉Exclusive breastfeeding is recommended for the first 6 months of life.
                             
-                         ☉The mother's mental and physical well being is very important for the baby's health.  
+                         ☉The mother's mental and physical well being is very important for her child's health.  
                     """.trimIndent(),
                 modifier = Modifier
                     .padding(bottom = 16.dp)

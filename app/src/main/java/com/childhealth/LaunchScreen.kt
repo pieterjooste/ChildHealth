@@ -22,7 +22,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
@@ -92,8 +91,7 @@ fun CompactLayout() {
             modifier = Modifier
                 .fillMaxWidth(0.7f)
                 .padding(20.dp)
-                .clip(RoundedCornerShape(30.dp)),
- //           contentScale = ContentScale.Fit
+                .clip(RoundedCornerShape(30.dp))
         )
 
         Text("When to Seek Help",
@@ -111,8 +109,7 @@ fun CompactLayout() {
             modifier = Modifier
                 .fillMaxWidth(0.5f)
                 .padding(20.dp)
-                .clip(RoundedCornerShape(30.dp)),
-//            contentScale = ContentScale.Fit
+                .clip(RoundedCornerShape(30.dp))
         )
     }
 }
@@ -145,8 +142,7 @@ fun ExpandedLayout() {
                     modifier = Modifier
                         .fillMaxWidth(0.5f)
                         .padding(8.dp)
-                        .clip(RoundedCornerShape(30.dp)),
-//                    contentScale = ContentScale.Fit
+                        .clip(RoundedCornerShape(30.dp))
                 )
             }
 
@@ -163,8 +159,7 @@ fun ExpandedLayout() {
                     modifier = Modifier
                         .fillMaxWidth(0.5f)
                         .padding(8.dp)
-                        .clip(RoundedCornerShape(30.dp)),
-//                    contentScale = ContentScale.Fit
+                        .clip(RoundedCornerShape(30.dp))
                 )
             }
         }
