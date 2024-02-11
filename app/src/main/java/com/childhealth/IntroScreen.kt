@@ -59,6 +59,10 @@ fun IntroScreen(onContinue: () -> Unit) {
             )
 
             Text(
+                text = "☉ Display setting in Light Mode will give you a better user experience.\n\n"
+            )
+
+            Text(
                 text ="☉ Disclaimer: These are guidelines only and not medical advice. Ill children should be seen by a trained health worker.\n\n"
             )
 

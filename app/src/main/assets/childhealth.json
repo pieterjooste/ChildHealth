@@ -1726,6 +1726,11 @@
           },
           {
             "id": 6,
+            "content": "The use of growth charts are strongly recommended for all babies and children.",
+            "type": "text"
+          },
+          {
+            "id": 7,
             "content": "Growth Charts",
             "type": "link",
             "linkUrl": "https://www.cdc.gov/growthcharts/index.htm"
@@ -1954,11 +1959,16 @@
           },
           {
             "id": 4,
-            "content": "there is an inability to swallow.",
+            "content": "stools are persistently white or light gray.",
             "type": "text"
           },
           {
             "id": 5,
+            "content": "there is an inability to swallow.",
+            "type": "text"
+          },
+          {
+            "id": 6,
             "content": "child suffers from severe abdominal pain.",
             "type": "text"
           }

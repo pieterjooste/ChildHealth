@@ -102,6 +102,7 @@ fun CompactLayout() {
         )
         Text("Developed by:")
         Text("Dr. Pieter Jooste")
+        Text("Updated: February 2024")
 
         Image(
             painter = painterResource(id = R.drawable.developer),
@@ -152,6 +153,7 @@ fun ExpandedLayout() {
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 Text("Developed by: Dr. Pieter Jooste")
+                Text("Updated: February 2024")
 
                 Image(
                     painter = painterResource(id = R.drawable.developer),
