@@ -20,7 +20,7 @@ fun ShareScreen(navigator: DestinationsNavigator) {
         putExtra(Intent.EXTRA_SUBJECT, "Share Child Health App")
         putExtra(
             Intent.EXTRA_TEXT,
-            "https://play.google.com/store/apps/details?id=com.childhealth&pcampaignid=web_share"
+            "https://play.google.com/store/apps/details?id=com.childhealth"
         )
 
     }

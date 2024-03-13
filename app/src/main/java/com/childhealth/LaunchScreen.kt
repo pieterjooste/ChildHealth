@@ -152,7 +152,7 @@ fun ExpandedLayout() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                Text("Developed by: Dr. Pieter Jooste")
+                Text("Dr. Pieter Jooste")
                 Text("Updated: February 2024")
 
                 Image(
