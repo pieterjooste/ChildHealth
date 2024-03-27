@@ -1,5 +1,148 @@
 [
   {
+    "id": "emergency",
+    "name": "Emergency",
+    "sections": [
+      {
+        "id": "red",
+        "background": "red",
+        "content": [
+          {
+            "id": 0,
+            "content": "Obstructed or absent breathing",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "If sudden, the aspiration of a foreign body may be the cause.",
+            "type": "text"
+          },
+          {
+            "id": 2,
+            "content": "Noisy breathing (stridor) and struggling to breath are also signs of an obstructed airway.",
+            "type": "text"
+          },
+          {
+            "id": 3,
+            "content": "The Heimlich maneuver should be used to remove a foreign body from the airway.",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "content": "Perform mouth to mouth breathing if there is no breathing and call for help.",
+            "type": "text"
+          },
+          {
+            "id": 5,
+            "content": "If there is no heartbeat, chest compressions must be commenced.\n",
+            "type": "text"
+          },
+          {
+            "id": 6,
+            "content": "Severe respiratory distress",
+            "type": "titletext"
+          },
+          {
+            "id": 7,
+            "content": "Fast breathing, chest indrawing, nasal flaring and a grunting noise on exhalation are signs of severe respiratory distress.",
+            "type": "text"
+          },
+          {
+            "id": 8,
+            "content": "Oxygen and antibiotics for a lung infection are indicated.\n",
+            "type": "text"
+          },
+          {
+            "id": 9,
+            "content": "Central cyanosis",
+            "type": "titletext"
+          },
+          {
+            "id": 10,
+            "content": "Central cyanosis can be identified by blue lips and tongue and indicate a lack of oxygen.",
+            "type": "text"
+          },
+          {
+            "id": 11,
+            "content": "If oxygen saturation is less than 90% in room air, extra oxygen is needed.\n",
+            "type": "text"
+          },
+          {
+            "id": 12,
+            "content": "Signs of shock",
+            "type": "titletext"
+          },
+          {
+            "id": 13,
+            "content": "Cold hands and a high heart rate with a weak pulse are signs of shock.",
+            "type": "text"
+          },
+          {
+            "id": 14,
+            "content": "Severe dehydration, blood infection (septicaemia), significant blood loss and heart failure may cause shock and urgent treatment is needed.\n",
+            "type": "text"
+          },
+          {
+            "id": 15,
+            "content": "Coma",
+            "type": "titletext"
+          },
+          {
+            "id": 16,
+            "content": "Coma or a reduced level of consciousness may have many causes but a low blood sugar or convulsions should always be excluded.\n",
+            "type": "text"
+          },
+          {
+            "id": 17,
+            "content": "Convulsions",
+            "type": "titletext"
+          },
+          {
+            "id": 18,
+            "content": "Convulsions (seizures,epilepsy) can be identified by abnormal movements.",
+            "type": "text"
+          },
+          {
+            "id": 19,
+            "content": "Urgent treatment is necessary to stop convulsions. A low blood glucose should also be excluded.\n",
+            "type": "text"
+          },
+          {
+            "id": 20,
+            "content": "Signs of severe dehydration",
+            "type": "titletext"
+          },
+          {
+            "id": 21,
+            "content": "Lethargy, sunken eyes and a very slow return after pinching the skin are signs of severe dehydration usually caused by diarrhoea and vomiting.",
+            "type": "text"
+          },
+          {
+            "id": 22,
+            "content": "Urgent fluid administration is necessary.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "id": "clear",
+        "background": "clear",
+        "content": [
+          {
+            "id": 0,
+            "content": "References: ",
+            "type": "titletext"
+          },
+          {
+            "id": 1,
+            "content": "1. World Health Organization. (2013). Pocket book of hospital care for children: Guidelines for the management of common childhood illnesses, 2nd ed.. Section 1.1 Triage; p 2-3. <https://apps.who.int/iris/handle/10665/81170>",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "brain",
     "name": "Brain",
     "sections": [
@@ -420,17 +563,17 @@
               "sheetContent": [
                 {
                   "id": 0,
-                  "content": "No breathing for 20 seconds or turning blue while not breathing.",
+                  "content": "Apnoea: no breathing for 20 seconds or turning blue while not breathing.",
                   "type": "text"
                 },
                 {
                   "id": 1,
-                  "content": "This is an emergency and needs immediate attention. If the baby/child does not respond to stimulation, mouth to mouth breathing is necessary. Remove any obstruction if present. Use Heimlich manoever to remove foreign body, if choking occurred. If there is no heartbeat, do CPR.",
+                  "content": "This is an emergency and needs immediate attention. If the baby/child does not respond to stimulation, mouth to mouth breathing is necessary. Remove any obstruction if present. Use Heimlich maneuver to remove foreign body, if choking occurred. If there is no heartbeat, do CPR.",
                   "type": "redtext"
                 },
                 {
                     "id": 2,
-                    "content": "CPR Training Video",
+                    "content": "CPR and Choking Training Video",
                     "type": "link",
                     "linkUrl": "https://www.rch.org.au/cocoon/project/moving-on/Family_resuscitation_training_videos/"
                 },
@@ -840,7 +983,7 @@
           },
           {
             "id": 2,
-            "content": "dairrhoea is caused by certain foods or fluids.",
+            "content": "diarrhoea is caused by certain foods or fluids.",
             "type": "text"
           },
           {
@@ -1031,7 +1174,7 @@
                     },
                     {
                         "id": 4,
-                        "content": "On the tongue local loss of papillae leads to red pathes with white borders that give the tongue the appearance of a map.",
+                        "content": "On the tongue local loss of papillae leads to red patches with white borders that give the tongue the appearance of a map.",
                         "type": "text"
                     },
                     {
@@ -1438,7 +1581,7 @@
                 },
                 {
                   "id": 5,
-                  "content": "Absent red reflex in the left eye. Referral to an opthalmologist will be necessary to determine the cause.",
+                  "content": "Absent red reflex in the left eye. Referral to an ophthalmologist will be necessary to determine the cause.",
                   "type": "text"
                 },
                 {
@@ -1517,7 +1660,7 @@
           },
           {
             "id": 2,
-            "content": "2. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 13.1 Opthalmological emergencies, Chapter 13.2 Congenital, developmental and neoplastic conditions of the eye, Chapter 13.3 Ocular trauma, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
+            "content": "2. Cameron, P, Browne, G, Biswadev, M, Stuart, D & Simon, C 2019, Textbook of Paediatric Emergency Medicine Third Edition [E-book] Chapter 13.1 Ophthalmological emergencies, Chapter 13.2 Congenital, developmental and neoplastic conditions of the eye, Chapter 13.3 Ocular trauma, Elsevier, cited 2023 Oct.  <https://ia802909.us.archive.org/13/items/2-5326064462732461949/2_5326064462732461949.pdf>",
             "type": "text"
           }
         ]
@@ -2254,36 +2397,41 @@
           },
           {
             "id": 2,
-            "content": "a burning sensation or pain with urination occurs.",
+            "content": "the colour of the urine is dark brown (cola coloured).",
             "type": "text"
           },
           {
             "id": 3,
-            "content": "a fever of unknown cause is present. An urine tract infection must be excluded.",
+            "content": "a burning sensation or pain with urination occurs.",
             "type": "text"
           },
           {
             "id": 4,
-            "content": "there is an inability to urinate or lack of urine output is observed.",
+            "content": "a fever of unknown cause is present. An urine tract infection must be excluded.",
             "type": "text"
           },
           {
             "id": 5,
-            "content": "a painful and/or enlarged scrotum is noted.",
+            "content": "there is an inability to urinate or lack of urine output is observed.",
             "type": "text"
           },
           {
             "id": 6,
-            "content": "the foreskin of the penis becomes trapped behind the head of the penis (paraphimosis). It can cause a decrease in blood supply to the head of the penis.",
+            "content": "a painful and/or enlarged scrotum is noted.",
             "type": "text"
           },
           {
             "id": 7,
-            "content": "vaginal bleeding or discharge occurs.",
+            "content": "the foreskin of the penis becomes trapped behind the head of the penis (paraphimosis). It can cause a decrease in blood supply to the head of the penis.",
             "type": "text"
           },
           {
             "id": 8,
+            "content": "vaginal bleeding or discharge occurs.",
+            "type": "text"
+          },
+          {
+            "id": 9,
             "content": "vaginal pain is experienced.",
             "type": "text"
           }
@@ -2613,7 +2761,7 @@
           },
           {
             "id": 8,
-            "content": "enlarged lymphnodes are noted.",
+            "content": "enlarged lymph nodes are noted.",
             "type": "text"
           },
           {
