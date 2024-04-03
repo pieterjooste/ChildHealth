@@ -49,21 +49,21 @@ fun IntroScreen(onContinue: () -> Unit) {
                     .padding(bottom = 16.dp),
             )
             Text(
-                text = "☉ Scroll down to bottom of page to CONTINUE.\n\n",
+                text = "☉ Scroll down to bottom of page to CONTINUE.\n",
                 modifier = Modifier
                     .padding(top = 16.dp)
             )
 
             Text(
-                text = "☉ Privacy Policy: No personal information is collected by this app.\n\n"
+                text = "☉ Privacy Policy: No personal information is collected by this app.\n"
             )
 
             Text(
-                text = "☉ Display setting in Light Mode will give you a better user experience.\n\n"
+                text = "☉ Display setting in Light Mode will give you a better user experience.\n"
             )
 
             Text(
-                text ="☉ Disclaimer: These are guidelines only and not medical advice. Ill children should be seen by a trained health worker.\n\n"
+                text ="☉ Disclaimer: These are guidelines only and not medical advice. Ill children should be seen by a trained health worker.\n"
             )
 
             Text(

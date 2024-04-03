@@ -94,12 +94,12 @@
           },
           {
             "id": 17,
-            "content": "If neck trauma is not suspected turn the child on the side to reduce the risk of aspiration.",
+            "content": "If neck trauma is not suspected, turn the child on the side to reduce the risk of aspiration.",
             "type": "text"
           },
           {
             "id": 18,
-            "content": "Coma or a reduced level of consciousness may have many causes but a low blood sugar or convulsions should always be excluded.\n",
+            "content": "Coma or a reduced level of consciousness may have many causes. A low blood sugar or convulsions should always be excluded.\n",
             "type": "text"
           },
           {
@@ -1274,61 +1274,66 @@
           },
           {
             "id": 6,
+            "content": "wax accumulation causes hearing loss. Wax removal should only be done by a trained health worker",
+            "type": "text"
+          },
+          {
+            "id": 7,
             "content": "Nose:",
             "type": "titletext"
           },
           {
-            "id": 7,
+            "id": 8,
             "content": "child has a chronic blocked nose.",
             "type": "text"
           },
           {
-            "id": 8,
+            "id": 9,
             "content": "purple-blue shadows beneath the eyes are noted.",
             "type": "text"
           },
           {
-            "id": 9,
+            "id": 10,
             "content": "snoring occurs.",
             "type": "text"
           },
           {
-            "id": 10,
+            "id": 11,
             "content": "unilateral and bad smelling nasal discharge is present.",
             "type": "text"
           },
           {
-            "id": 11,
+            "id": 12,
             "content": "duration of discharge from the nose is more than 14 days.",
             "type": "text"
           },
           {
-            "id": 12,
+            "id": 13,
             "content": "recurrent nose bleeds occur.",
             "type": "text"
           },
           {
-            "id": 13,
+            "id": 14,
             "content": "Mouth and Throat:",
             "type": "titletext"
           },
           {
-            "id": 14,
+            "id": 15,
             "content": "white patches (thrush) are noted in the mouth.",
             "type": "text"
           },
           {
-            "id": 15,
+            "id": 16,
             "content": "oral ulcers or mouth sores are present.",
             "type": "text"
           },
           {
-            "id": 16,
+            "id": 17,
             "content": "baby is struggling with sucking from the breast or bottle.",
             "type": "text"
           },
           {
-            "id": 17,
+            "id": 18,
             "content": "tongue tie",
             "type": "button",
             "sheet": {
@@ -1383,22 +1388,22 @@
             }
           },
           {
-            "id": 18,
+            "id": 19,
             "content": "throat or swallowing is painful.",
             "type": "text"
           },
           {
-            "id": 19,
+            "id": 20,
             "content": "a rash combined with a sore throat and red tongue are noted.",
             "type": "text"
           },
           {
-            "id": 20,
+            "id": 21,
             "content": "tooth decay and inflamed gums.",
             "type": "text"
           },
           {
-            "id": 21,
+            "id": 22,
             "content": "drooling persists after 5 years of age.",
             "type": "text"
           }
@@ -1440,11 +1445,16 @@
           },
           {
             "id": 6,
+            "content": "a foreign body is stuck in the nose.",
+            "type": "text"
+          },
+          {
+            "id": 7,
             "content": "Throat:",
             "type": "titletext"
           },
           {
-            "id": 7,
+            "id": 8,
             "content": "child can not swallow anything.",
             "type": "text"
           }
@@ -3427,7 +3437,7 @@
             "id": 2,
             "content": "Blog",
             "type": "link",
-            "linkUrl": "https://childhealthforall.com/blog"
+            "linkUrl": "https://childhealthforall.com/post/let-us-start-a-village"
           },
           {
             "id": 3,
