@@ -1617,7 +1617,7 @@
                 },
                 {
                   "id": 4,
-                  "content": "absent",
+                  "content": "absentreflex",
                   "type": "image"
                 },
                 {
@@ -1627,7 +1627,7 @@
                 },
                 {
                   "id": 6,
-                  "content": "Credit for images: Wikipedia",
+                  "content": "Credit for images: Wikipedia and British Journal of General Practice.",
                   "type": "text"
                 }
               ]
