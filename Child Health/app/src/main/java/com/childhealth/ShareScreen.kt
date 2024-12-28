@@ -9,27 +9,27 @@ import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 
-@Destination
-@Composable
+//@Destination
+//@Composable
 
-fun ShareScreen(navigator: DestinationsNavigator) {
-
-    val context = LocalContext.current
-    val sendIntent = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_SUBJECT, "Share Child Health App")
-        putExtra(
-            Intent.EXTRA_TEXT,
-            "https://play.google.com/store/apps/details?id=com.childhealth"
-        )
-
-    }
-    val shareIntent = Intent.createChooser(sendIntent, null)
-    startActivity(context, shareIntent, null)
-    navigator.navigate(
-        ContentScreenDestination()
-    )
-}
+//fun ShareScreen(navigator: DestinationsNavigator) {
+//
+//    val context = LocalContext.current
+//    val sendIntent = Intent(Intent.ACTION_SEND).apply {
+//        type = "text/plain"
+//        putExtra(Intent.EXTRA_SUBJECT, "Share Child Health App")
+//        putExtra(
+//            Intent.EXTRA_TEXT,
+//            "https://play.google.com/store/apps/details?id=com.childhealth"
+//        )
+//
+//    }
+//    val shareIntent = Intent.createChooser(sendIntent, null)
+//    startActivity(context, shareIntent, null)
+//    navigator.navigate(
+//        ContentScreenDestination()
+//    )
+//}
 
 @Destination
 @Composable

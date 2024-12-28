@@ -98,6 +98,18 @@ class ScreenViewModel: ViewModel() {
                 )
             }
 
+            TypeSelected.GRAY_TEXT.stringValue -> {
+                Text(
+                    text = content,
+                    modifier = Modifier
+                        .background(
+                            Color(0xFFD808080),
+                            shape = RoundedCornerShape(10.dp)
+                        )
+                        .padding(8.dp)
+                )
+            }
+
             TypeSelected.LINK.stringValue -> {
                 Text(
                     text = content,

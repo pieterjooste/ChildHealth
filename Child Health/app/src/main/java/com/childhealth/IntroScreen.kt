@@ -59,6 +59,10 @@ fun IntroScreen(onContinue: () -> Unit) {
             )
 
             Text(
+                text = "☉ The app contains links to external apps and webpages with their own privacy policies.\n"
+            )
+
+            Text(
                 text = "☉ Display setting in Light Mode will give you a better user experience.\n"
             )
 
@@ -78,7 +82,7 @@ fun IntroScreen(onContinue: () -> Unit) {
                             
                          ☉The mother's mental and physical well being is very important for her child's health.
                           
-                         ☉Updated: April 2024.
+                         ☉Updated: January 2025.
                     """.trimIndent(),
                 modifier = Modifier
                     .padding(bottom = 16.dp)

@@ -31,7 +31,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import com.childhealth.destinations.SendEmailScreenDestination
-import com.childhealth.destinations.ShareScreenDestination
+//import com.childhealth.destinations.ShareScreenDestination
 import com.childhealth.destinations.TopicScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
@@ -67,13 +67,6 @@ fun ContentScreen(navigator: DestinationsNavigator) {
         bottomBar = {
             BottomAppBar(
                 actions = {
-                    IconButton(onClick = {
-                        navigator.navigate(
-                            ShareScreenDestination()
-                        )
-                    }) {
-                        Icon(Icons.Filled.Share, contentDescription = "Share app", tint = Color(0xFF007AFF))
-                    }
                     IconButton(onClick = {
                         navigator.navigate(
                             SendEmailScreenDestination()
