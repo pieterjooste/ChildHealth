@@ -9,12 +9,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.childhealth.ui.theme.ChildHealthTheme
+import com.google.android.play.core.review.ReviewManagerFactory
 import com.ramcosta.composedestinations.DestinationsNavHost
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        showFeedbackDialog()
         setContent {
 
             ChildHealthTheme {
@@ -28,4 +30,15 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    private fun showFeedbackDialog() {
+        val reviewManager = ReviewManagerFactory.create(applicationContext)
+        reviewManager.requestReviewFlow().addOnCompleteListener {
+            if(it.isSuccessful) {
+                reviewManager.launchReviewFlow(this, it.result)
+            }
+        }
+    }
 }
+
+
