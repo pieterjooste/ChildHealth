@@ -26,9 +26,10 @@
 
     <queries>
         <intent>
-            <action android:name="android.intent.action.SEND" />
-            <data android:mimeType="text/plain" />
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
         </intent>
+        <package android:name="com.google.android.youtube" />
     </queries>
 
 </manifest>

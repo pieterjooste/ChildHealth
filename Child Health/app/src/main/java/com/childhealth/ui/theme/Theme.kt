@@ -57,8 +57,19 @@ fun ChildHealthTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+
+            // 1. Make system bars transparent for edge-to-edge
+            // This line replaces window.statusBarColor for edge-to-edge
+            // window.statusBarColor = Color.Transparent.toArgb()
+            // window.navigationBarColor = Color.Transparent.toArgb() // Also make nav bar transparent
+
+            // 2. Enable drawing behind system bars
+            WindowCompat.setDecorFitsSystemWindows(window, false)
+
+            // 3. Control system bar icon contrast
+            val insetsController = WindowCompat.getInsetsController(window, view)
+            insetsController.isAppearanceLightStatusBars = !darkTheme // Light icons for dark theme, dark icons for light theme
+            insetsController.isAppearanceLightNavigationBars = !darkTheme // Same for navigation bar
         }
     }
 

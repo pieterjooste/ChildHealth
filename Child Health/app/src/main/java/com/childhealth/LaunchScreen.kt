@@ -22,25 +22,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.childhealth.destinations.ContentScreenDestination
-import com.childhealth.ui.theme.ChildHealthTheme
-import com.ramcosta.composedestinations.DestinationsNavHost
-import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.annotation.RootNavGraph
-import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import androidx.navigation.NavHostController
 import kotlinx.coroutines.delay
+import androidx.compose.ui.platform.LocalDensity
+//import com.childhealth.R
 
 
 @Composable
-@Destination
-@RootNavGraph(start = true)
-fun LaunchScreen(navigator: DestinationsNavigator) {
+fun LaunchScreen(navController: NavHostController) {
     var isActive by remember { mutableStateOf(false) }
 
 
@@ -50,7 +45,8 @@ fun LaunchScreen(navigator: DestinationsNavigator) {
     }
 
     if (isActive) {
-        IntroScreen(onContinue = { navigator.navigate(ContentScreenDestination()) })
+        navController.navigate(ContentRoute)
+        //IntroScreen(onContinue = { navController.navigate(ContentRoute) })
     } else {
         Box(
             modifier = Modifier
@@ -63,7 +59,8 @@ fun LaunchScreen(navigator: DestinationsNavigator) {
                     .fillMaxSize()
                     .wrapContentSize(Alignment.Center)
             ) {
-                val isCompact = LocalConfiguration.current.screenWidthDp < 600
+                //val isCompact = LocalConfiguration.current.screenWidthDp < 600
+                val isCompact = LocalWindowInfo.current.containerSize.width < with(LocalDensity.current) { 600.dp.toPx() }
                 if (isCompact) {
                     CompactLayout()
                 } else {
@@ -82,7 +79,10 @@ fun CompactLayout() {
     ) {
         Text("Child Health 2 - 60 Months",
             fontSize = 24.sp,
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            fontWeight = FontWeight.ExtraBold,
+            modifier = Modifier
+                .fillMaxWidth()
         )
 
         Image(
@@ -96,6 +96,7 @@ fun CompactLayout() {
 
         Text("When to Seek Help",
             fontSize = 18.sp,
+            fontWeight = FontWeight.Bold,
             modifier = Modifier
                 .fillMaxWidth(),
             textAlign = TextAlign.Center
@@ -121,7 +122,10 @@ fun ExpandedLayout() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Text("When to Seek Help", fontSize = 32.sp)
+        Text("When to Seek Help",
+            fontWeight = FontWeight.ExtraBold,
+            fontSize = 32.sp
+        )
 
         Row(
             modifier = Modifier.fillMaxSize(),
@@ -134,7 +138,10 @@ fun ExpandedLayout() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                Text("Child Health 2-60 Months")
+                Text("Child Health 2-60 Months",
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 24.sp
+                )
 
                 Image(
                     painter = painterResource(id = R.drawable.hands),
@@ -164,14 +171,5 @@ fun ExpandedLayout() {
                 )
             }
         }
-    }
-}
-
-
-@Preview(showBackground = true)
-@Composable
-fun LaunchScreenPreview() {
-    ChildHealthTheme {
-        DestinationsNavHost(navGraph = NavGraphs.root)
     }
 }

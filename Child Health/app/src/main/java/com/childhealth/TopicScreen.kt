@@ -1,7 +1,7 @@
 package com.childhealth
 
 import android.content.Intent
-import android.net.Uri
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -27,19 +27,20 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import androidx.navigation.NavHostController
+import androidx.core.net.toUri
+//import com.childhealth.models.TopicItem
+//import com.childhealth.viewmodel.AppViewModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Destination
 @Composable
 
 fun TopicScreen(
-    navigator: DestinationsNavigator,
-    topic: TopicItem
+    navController: NavHostController,
+    topic: TopicItem,
+    viewModel: AppViewModel
 ) {
-    val vm = ScreenViewModel()
 
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
     val context = LocalContext.current
@@ -63,7 +64,7 @@ fun TopicScreen(
             BottomAppBar(
                 actions = {
                     IconButton(onClick = {
-                        navigator.popBackStack()
+                        navController.popBackStack()
                     }) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Arrow Back")
                     }
@@ -87,7 +88,7 @@ fun TopicScreen(
                         .fillMaxWidth()
                         .padding(8.dp)
                         .background(
-                            color = vm.getColorFromName(section.background),
+                            color = viewModel.getColorFromName(section.background),
                             shape = RoundedCornerShape(10.dp)
                         )
                 ) {
@@ -95,17 +96,26 @@ fun TopicScreen(
                         modifier = Modifier.padding(16.dp)
                     ) {
                         section.content.forEach { content ->
-                            vm.TypeBuilder(
-                                id = content.id,
+                            viewModel.TypeBuilder(
+                                //id = content.id,
+                                parentTopicId = topic.id,
                                 content = content.content,
                                 type = content.type,
                                 linkUrl = content.linkUrl,
                                 sheet = content.sheet,
-                                navigator = navigator,
+                                navController = navController,
                                 onLinkClick = { link ->
-                                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
-                                    (context as? ComponentActivity)?.let {
-                                        it.startActivity(intent)
+                                    try {
+                                        val intent = Intent(Intent.ACTION_VIEW, link.toUri())
+                                        if (intent.resolveActivity(context.packageManager) != null) {
+                                            (context as? ComponentActivity)?.startActivity(intent)
+                                        } else {
+                                            Toast.makeText(context, "Cannot open external link: Internet connection?", Toast.LENGTH_SHORT).show()
+//                                            Log.w("TopicScreen", "No activity found to handle ACTION_VIEW for URI: $link")
+                                        }
+                                    } catch (e: Exception) {
+                                        Toast.makeText(context, "Error opening external link: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
+//                                        Log.e("TopicScreen", "Error creating or starting intent for URI: $link", e)
                                     }
                                 }
                             )

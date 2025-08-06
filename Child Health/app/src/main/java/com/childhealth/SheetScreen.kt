@@ -1,7 +1,7 @@
 package com.childhealth
 
 import android.content.Intent
-import android.net.Uri
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -28,18 +28,20 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import androidx.navigation.NavHostController
+import androidx.core.net.toUri
+//import com.childhealth.models.Sheet
+//import com.childhealth.viewmodel.AppViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Destination
 @Composable
 
 fun SheetScreen(
-    navigator: DestinationsNavigator,
-    sheet: Sheet
+    navController: NavHostController,
+    sheet: Sheet,
+    viewModel: AppViewModel,
+    parentTopicId: String
 ) {
-    val vm = ScreenViewModel()
 
     val context = LocalContext.current
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
@@ -63,7 +65,7 @@ fun SheetScreen(
             BottomAppBar(
                 actions = {
                     IconButton(onClick = {
-                        navigator.popBackStack()
+                        navController.popBackStack()
                     }) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Arrow Back")
                     }
@@ -94,17 +96,28 @@ fun SheetScreen(
                     Column(
                         modifier = Modifier.padding(16.dp)
                     ) {
-                        vm.TypeBuilder(
-                            id = section.id,
+                        viewModel.TypeBuilder(
+                            //id = section.id,
                             content = section.content,
                             type = section.type,
                             linkUrl = section.linkUrl,
                             sheet = section.sheet,
-                            navigator = navigator,
-                            onLinkClick = {link ->
-                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
-                                (context as? ComponentActivity)?.let {
-                                    it.startActivity(intent)
+                            navController = navController,
+                            parentTopicId = parentTopicId,
+                            onLinkClick = { link ->
+//                                    val intent = Intent(Intent.ACTION_VIEW, link.toUri())
+//                                    (context as? ComponentActivity)?.startActivity(intent)
+                                try {
+                                    val intent = Intent(Intent.ACTION_VIEW, link.toUri())
+                                    if (intent.resolveActivity(context.packageManager) != null) {
+                                        (context as? ComponentActivity)?.startActivity(intent)
+                                    } else {
+                                        Toast.makeText(context, "Cannot open external link: Internet connection?", Toast.LENGTH_SHORT).show()
+//                                            Log.w("TopicScreen", "No activity found to handle ACTION_VIEW for URI: $link")
+                                    }
+                                } catch (e: Exception) {
+                                    Toast.makeText(context, "Error opening external link: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
+//                                        Log.e("TopicScreen", "Error creating or starting intent for URI: $link", e)
                                 }
                             }
                         )
@@ -114,4 +127,3 @@ fun SheetScreen(
         }
     }
 }
-

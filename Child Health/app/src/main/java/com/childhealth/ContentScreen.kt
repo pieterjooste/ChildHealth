@@ -1,6 +1,5 @@
 package com.childhealth
 
-import android.content.res.AssetManager
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -8,46 +7,37 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import kotlinx.serialization.json.Json
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.Share
-import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import com.childhealth.destinations.SendEmailScreenDestination
-//import com.childhealth.destinations.ShareScreenDestination
-import com.childhealth.destinations.TopicScreenDestination
-import com.ramcosta.composedestinations.annotation.Destination
-import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import androidx.navigation.NavHostController
+import androidx.compose.foundation.layout.Column
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import com.childhealth.navigateToTopic
+//import com.childhealth.viewmodel.AppViewModel
 
-
-fun AssetManager.readFile(fileName : String): String = open(fileName).bufferedReader().use{it.readText()}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-@Destination
-fun ContentScreen(navigator: DestinationsNavigator) {
+fun ContentScreen(navController: NavHostController, appViewModel: AppViewModel) {
 
-    val context = LocalContext.current
+//    val context = LocalContext.current
+//    val jsonString =  context.assets.readFile("childhealth.json")
+//    val topics: List<TopicItem> = Json.decodeFromString(jsonString)
 
-    val jsonString =  context.assets.readFile("childhealth.json")
-    val topics: List<TopicItem> = Json.decodeFromString(jsonString)
+    val topics by appViewModel.topics.collectAsState()
 
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
 
@@ -62,19 +52,6 @@ fun ContentScreen(navigator: DestinationsNavigator) {
                     Text("When To Seek Help")
                 },
                 scrollBehavior = scrollBehavior,
-            )
-        },
-        bottomBar = {
-            BottomAppBar(
-                actions = {
-                    IconButton(onClick = {
-                        navigator.navigate(
-                            SendEmailScreenDestination()
-                        )
-                    }) {
-                        Icon(Icons.Filled.Email, contentDescription = "Email developer", tint = Color(0xFF007AFF))
-                    }
-                }
             )
         }
     ) { innerPadding ->
@@ -116,11 +93,7 @@ fun ContentScreen(navigator: DestinationsNavigator) {
                             containerColor = Color(0xFF007AFF)
                         ),
                         onClick = {
-                            navigator.navigate(
-                                TopicScreenDestination(
-                                    topic
-                                )
-                            )
+                            navController.navigateToTopic(topic.name)
                         }
                     ) {
                         Text (
