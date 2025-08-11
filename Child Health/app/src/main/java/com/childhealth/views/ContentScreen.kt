@@ -1,4 +1,4 @@
-package com.childhealth
+package com.childhealth.views
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -25,7 +25,10 @@ import androidx.navigation.NavHostController
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import com.childhealth.viewmodel.AppViewModel
 import com.childhealth.navigateToTopic
+
+//import com.childhealth.navigateToTopic
 //import com.childhealth.viewmodel.AppViewModel
 
 

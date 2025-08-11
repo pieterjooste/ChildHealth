@@ -1,4 +1,4 @@
-package com.childhealth
+package com.childhealth.views
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -31,6 +31,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import kotlinx.coroutines.delay
 import androidx.compose.ui.platform.LocalDensity
+import com.childhealth.R
+
 //import com.childhealth.R
 
 

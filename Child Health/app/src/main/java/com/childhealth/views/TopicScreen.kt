@@ -1,4 +1,4 @@
-package com.childhealth
+package com.childhealth.views
 
 import android.content.Intent
 import android.widget.Toast
@@ -29,6 +29,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.core.net.toUri
+import com.childhealth.viewmodel.AppViewModel
+import com.childhealth.models.TopicItem
+
 //import com.childhealth.models.TopicItem
 //import com.childhealth.viewmodel.AppViewModel
 

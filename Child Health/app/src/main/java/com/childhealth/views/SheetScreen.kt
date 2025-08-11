@@ -1,4 +1,4 @@
-package com.childhealth
+package com.childhealth.views
 
 import android.content.Intent
 import android.widget.Toast
@@ -30,8 +30,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.core.net.toUri
+import com.childhealth.viewmodel.AppViewModel
+import com.childhealth.models.Sheet
 //import com.childhealth.models.Sheet
 //import com.childhealth.viewmodel.AppViewModel
+import com.google.android.play.core.review.ReviewManagerFactory
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -45,6 +48,7 @@ fun SheetScreen(
 
     val context = LocalContext.current
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
+    val activity = context as? ComponentActivity
 
     Scaffold(
         topBar = {
@@ -65,7 +69,28 @@ fun SheetScreen(
             BottomAppBar(
                 actions = {
                     IconButton(onClick = {
-                        navController.popBackStack()
+                        if (activity != null) {
+                            val reviewManager = ReviewManagerFactory.create(activity)
+                            val request = reviewManager.requestReviewFlow()
+                            request.addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+                                    val reviewInfo = task.result
+                                    val flow = reviewManager.launchReviewFlow(activity, reviewInfo)
+                                    flow.addOnCompleteListener { _ ->
+                                        // The review flow has finished. The API does not indicate whether the user
+                                        // reviewed or not, or even whether the review dialog was shown. Thus, no matter
+                                        // what the result is, navigate back.
+                                        navController.popBackStack()
+                                    }
+                                } else {
+                                    // There was some problem, continue to navigate back
+                                    navController.popBackStack()
+                                }
+                            }
+                        } else {
+                            // If activity is null, just navigate back
+                            navController.popBackStack()
+                        }
                     }) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Arrow Back")
                     }

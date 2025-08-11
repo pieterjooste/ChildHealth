@@ -1,4 +1,4 @@
-package com.childhealth
+package com.childhealth.views
 
 import kotlinx.serialization.Serializable
 
