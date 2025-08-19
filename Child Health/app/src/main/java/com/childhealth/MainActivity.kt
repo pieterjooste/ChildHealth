@@ -112,17 +112,17 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
             val topicId = routeArgs.name // topicId will not be null if toRoute succeeded
 
             // Log the topicId you're trying to find
-            Log.d("AppNavigator", "TopicRoute: Attempting to find topic with ID = '$topicId'")
+            //Log.d("AppNavigator", "TopicRoute: Attempting to find topic with ID = '$topicId'")
 
             // Collect the TopicItem from the ViewModel
             val topicItem by appViewModel.getTopicById(topicId).collectAsState(initial = null)
             val isLoadingTopics by appViewModel.isLoading.collectAsState()
 
-            Log.d("AppNavigator", "TopicRoute: For ID '$topicId', topicItem is null: ${topicItem == null}, isLoading: $isLoadingTopics")
+            //Log.d("AppNavigator", "TopicRoute: For ID '$topicId', topicItem is null: ${topicItem == null}, isLoading: $isLoadingTopics")
 
 
             if (topicItem != null) {
-                Log.d("AppNavigator", "TopicRoute: TopicItem found for ID '$topicId'. Name: '${topicItem?.name}'. Navigating to TopicScreen.")
+                //Log.d("AppNavigator", "TopicRoute: TopicItem found for ID '$topicId'. Name: '${topicItem?.name}'. Navigating to TopicScreen.")
                 TopicScreen(
                     navController = navController,
                     viewModel = appViewModel,
@@ -130,7 +130,7 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
                 )
             } else {
                 // topicItem is null, so display loading or not found state
-                Log.w("AppNavigator", "TopicRoute: TopicItem is NULL for ID '$topicId'. Displaying loading/not found indicator.")
+                //Log.w("AppNavigator", "TopicRoute: TopicItem is NULL for ID '$topicId'. Displaying loading/not found indicator.")
                 Box(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
@@ -143,7 +143,7 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
                         } else {
                             // If not globally loading and topicItem is still null, it might be an invalid ID or still processing
                             Text("Topic '$topicId' not found or still loading.")
-                            Log.e("AppNavigator", "TopicRoute: Topic '$topicId' still not found (or data not ready).")
+                            //Log.e("AppNavigator", "TopicRoute: Topic '$topicId' still not found (or data not ready).")
                         }
                     }
                 }
@@ -161,16 +161,16 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
             val parentTopicId = routeArgs.name
             val sheetTitle = routeArgs.title // This comes from your SheetRoute definition
 
-            Log.d("AppNavigator", "SheetRoute: Attempting to find sheet with parentTopicId='$parentTopicId', sheetTitle='$sheetTitle'")
+            //Log.d("AppNavigator", "SheetRoute: Attempting to find sheet with parentTopicId='$parentTopicId', sheetTitle='$sheetTitle'")
 
             // Observe the specific sheet from the ViewModel
             val sheet by appViewModel.getSheetByTitle(parentTopicId, sheetTitle).collectAsState(initial = null)
 
-            Log.d("AppNavigator", "SheetRoute: For parentId='$parentTopicId', title='$sheetTitle', sheet is null: ${sheet == null}")
+            //Log.d("AppNavigator", "SheetRoute: For parentId='$parentTopicId', title='$sheetTitle', sheet is null: ${sheet == null}")
 
 
             if (sheet != null) {
-                Log.d("AppNavigator", "SheetRoute: Sheet found for title '$sheetTitle' in topic '$parentTopicId'. Navigating to SheetScreen.")
+                //Log.d("AppNavigator", "SheetRoute: Sheet found for title '$sheetTitle' in topic '$parentTopicId'. Navigating to SheetScreen.")
                 SheetScreen(
                     navController = navController,
                     viewModel = appViewModel,
@@ -179,7 +179,7 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
                 )
             } else {
                 // sheet is null, so display loading or not found state
-                Log.w("AppNavigator", "SheetRoute: Sheet is NULL for title '$sheetTitle' in topic '$parentTopicId'. Displaying loading/not found indicator.")
+                //Log.w("AppNavigator", "SheetRoute: Sheet is NULL for title '$sheetTitle' in topic '$parentTopicId'. Displaying loading/not found indicator.")
                 Box(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
@@ -191,7 +191,7 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
                         // Text("Loading sheet details...")
                         // } else {
                         Text("Sheet '$sheetTitle' not found or still loading.")
-                        Log.e("AppNavigator", "SheetRoute: Sheet '$sheetTitle' in topic '$parentTopicId' still not found (or data not ready).")
+                        //Log.e("AppNavigator", "SheetRoute: Sheet '$sheetTitle' in topic '$parentTopicId' still not found (or data not ready).")
                         // }
                     }
                 }
