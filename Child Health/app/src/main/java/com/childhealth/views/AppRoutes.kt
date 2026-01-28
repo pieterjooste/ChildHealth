@@ -5,9 +5,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 object LaunchRoute
 
-//@Serializable
-//object IntroRoute
-
 @Serializable
 object ContentRoute
 

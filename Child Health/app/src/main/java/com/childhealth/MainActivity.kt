@@ -37,17 +37,6 @@ import com.childhealth.views.SheetScreen
 import com.childhealth.views.TopicRoute
 import com.childhealth.views.TopicScreen
 
-//import com.childhealth.utils.theme.CildHealthTheme
-//import com.childhealth.viewmodel.AppViewModel
-//import com.childhealth.views.ContentRoute
-//import com.childhealth.views.ContentScreen
-//import com.childhealth.views.LaunchRoute
-//import com.childhealth.views.LaunchScreen
-//import com.childhealth.views.SheetRoute
-//import com.childhealth.views.SheetScreen
-//import com.childhealth.views.TopicRoute
-//import com.childhealth.views.TopicScreen
-
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,7 +52,6 @@ class MainActivity : ComponentActivity() {
                 ) {
                     val appViewModel: AppViewModel = viewModel()
 
-                    // Trigger data loading once
                     LaunchedEffect(Unit) {
                         appViewModel.loadTopics(applicationContext)
                     }
@@ -86,17 +74,6 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
             LaunchScreen(navController = navController)
         }
 
-//        composable<IntroRoute> {
-//            IntroScreen(
-//                onContinue = {
-//                    navController.navigate(ContentRoute) {
-//                        popUpTo(IntroRoute) { inclusive = true }
-//                        launchSingleTop = true
-//                    }
-//                }
-//            )
-//        }
-
         composable<ContentRoute> {
             ContentScreen(navController = navController, appViewModel = appViewModel)
         }
@@ -109,28 +86,17 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
                 navController.popBackStack()
                 return@composable
             }
-            val topicId = routeArgs.name // topicId will not be null if toRoute succeeded
-
-            // Log the topicId you're trying to find
-            //Log.d("AppNavigator", "TopicRoute: Attempting to find topic with ID = '$topicId'")
-
-            // Collect the TopicItem from the ViewModel
+            val topicId = routeArgs.name
             val topicItem by appViewModel.getTopicById(topicId).collectAsState(initial = null)
             val isLoadingTopics by appViewModel.isLoading.collectAsState()
 
-            //Log.d("AppNavigator", "TopicRoute: For ID '$topicId', topicItem is null: ${topicItem == null}, isLoading: $isLoadingTopics")
-
-
             if (topicItem != null) {
-                //Log.d("AppNavigator", "TopicRoute: TopicItem found for ID '$topicId'. Name: '${topicItem?.name}'. Navigating to TopicScreen.")
                 TopicScreen(
                     navController = navController,
                     viewModel = appViewModel,
-                    topic = topicItem!! // Now this is safe because of the 'topicItem != null' check
+                    topic = topicItem!!
                 )
             } else {
-                // topicItem is null, so display loading or not found state
-                //Log.w("AppNavigator", "TopicRoute: TopicItem is NULL for ID '$topicId'. Displaying loading/not found indicator.")
                 Box(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
@@ -138,12 +104,10 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         CircularProgressIndicator()
                         Spacer(modifier = Modifier.height(8.dp))
-                        if (isLoadingTopics) { // Optional: Check global loading state
+                        if (isLoadingTopics) {
                             Text("Loading topic details...")
                         } else {
-                            // If not globally loading and topicItem is still null, it might be an invalid ID or still processing
                             Text("Topic '$topicId' not found or still loading.")
-                            //Log.e("AppNavigator", "TopicRoute: Topic '$topicId' still not found (or data not ready).")
                         }
                     }
                 }
@@ -158,19 +122,13 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
                 navController.popBackStack()
                 return@composable
             }
+
             val parentTopicId = routeArgs.name
-            val sheetTitle = routeArgs.title // This comes from your SheetRoute definition
-
-            //Log.d("AppNavigator", "SheetRoute: Attempting to find sheet with parentTopicId='$parentTopicId', sheetTitle='$sheetTitle'")
-
-            // Observe the specific sheet from the ViewModel
+            val sheetTitle = routeArgs.title
             val sheet by appViewModel.getSheetByTitle(parentTopicId, sheetTitle).collectAsState(initial = null)
-
-            //Log.d("AppNavigator", "SheetRoute: For parentId='$parentTopicId', title='$sheetTitle', sheet is null: ${sheet == null}")
 
 
             if (sheet != null) {
-                //Log.d("AppNavigator", "SheetRoute: Sheet found for title '$sheetTitle' in topic '$parentTopicId'. Navigating to SheetScreen.")
                 SheetScreen(
                     navController = navController,
                     viewModel = appViewModel,
@@ -178,8 +136,6 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
                     parentTopicId = parentTopicId
                 )
             } else {
-                // sheet is null, so display loading or not found state
-                //Log.w("AppNavigator", "SheetRoute: Sheet is NULL for title '$sheetTitle' in topic '$parentTopicId'. Displaying loading/not found indicator.")
                 Box(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
@@ -187,12 +143,7 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         CircularProgressIndicator()
                         Spacer(modifier = Modifier.height(8.dp))
-                        // if (isLoadingSheet) { // Optional: Check sheet specific loading state
-                        // Text("Loading sheet details...")
-                        // } else {
                         Text("Sheet '$sheetTitle' not found or still loading.")
-                        //Log.e("AppNavigator", "SheetRoute: Sheet '$sheetTitle' in topic '$parentTopicId' still not found (or data not ready).")
-                        // }
                     }
                 }
             }
