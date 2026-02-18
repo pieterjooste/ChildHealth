@@ -61,7 +61,7 @@ class AppViewModel: ViewModel() {
                 val jsonString = context.assets.open("childhealth.json")
                     .bufferedReader()
                     .use { it.readText() }
-                val topicsList = Json.Default.decodeFromString<List<TopicItem>>(jsonString)
+                val topicsList = Json.decodeFromString<List<TopicItem>>(jsonString)
                 _topics.value = topicsList
             } catch (e: IOException) {
                 e.printStackTrace()
@@ -83,7 +83,7 @@ class AppViewModel: ViewModel() {
             currentTopicsList.find { topic -> topic.name == topicIdToFind }
         }.stateIn(
             scope = viewModelScope, // Scope for sharing the StateFlow
-            started = SharingStarted.Companion.WhileSubscribed(5000L), // Keep active for 5s after last subscriber, adjust as needed
+            started = SharingStarted.WhileSubscribed(5000L), // Keep active for 5s after last subscriber, adjust as needed
             initialValue = null // Initial value before _topics emits or if not found immediately
         )
     }
@@ -115,27 +115,27 @@ class AppViewModel: ViewModel() {
             foundSheet
         }.stateIn(
             scope = viewModelScope,
-            started = SharingStarted.Companion.WhileSubscribed(5000L),
+            started = SharingStarted.WhileSubscribed(5000L),
             initialValue = null
         )
     }
 
     fun getColorFromName(colorName: String): Color {
         return when (colorName.lowercase()) {
-            "clear" -> Color.Companion.Transparent
-            "black" -> Color.Companion.Black
-            "white" -> Color.Companion.White
-            "gray" -> Color.Companion.Gray
-            "red" -> Color.Companion.Red
+            "clear" -> Color.Transparent
+            "black" -> Color.Black
+            "white" -> Color.White
+            "gray" -> Color.Gray
+            "red" -> Color.Red
             "green" -> Color(0xFF4CD964)
             "blue" -> Color(0xFF007AFF)
             "orange" -> Color(0xFFFFA500)
-            "yellow" -> Color.Companion.Yellow
+            "yellow" -> Color.Yellow
             "pink" -> Color(0xFFFFC0CB)
-            "purple" -> Color.Companion.Magenta
+            "purple" -> Color.Magenta
             "primary" -> Color(0xFF6200EE)
             "secondary" -> Color(0xFF03DAC5)
-            else -> Color.Companion.White
+            else -> Color.White
         }
     }
 
@@ -155,7 +155,7 @@ class AppViewModel: ViewModel() {
                 Image(
                     painter = painterResource(id = content.getResourceIdentifier(LocalContext.current)),
                     contentDescription = null,
-                    modifier = Modifier.Companion
+                    modifier = Modifier
                         .fillMaxWidth()
                         .padding(8.dp)
                         .clip(RoundedCornerShape(30.dp))
@@ -165,16 +165,16 @@ class AppViewModel: ViewModel() {
             TypeSelected.TITLE_TEXT.stringValue -> {
                 Text(
                     text = content,
-                    style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Companion.Bold)
+                    style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold)
                 )
             }
 
             TypeSelected.RED_TEXT.stringValue -> {
                 Text(
                     text = content,
-                    modifier = Modifier.Companion
+                    modifier = Modifier
                         .background(
-                            Color.Companion.Red,
+                            Color.Red,
                             shape = androidx.compose.foundation.shape.RoundedCornerShape(10.dp)
                         )
                         .padding(8.dp)
@@ -184,9 +184,9 @@ class AppViewModel: ViewModel() {
             TypeSelected.GREEN_TEXT.stringValue -> {
                 Text(
                     text = content,
-                    modifier = Modifier.Companion
+                    modifier = Modifier
                         .background(
-                            Color.Companion.Green,
+                            Color.Green,
                             shape = androidx.compose.foundation.shape.RoundedCornerShape(10.dp)
                         )
                         .padding(8.dp)
@@ -196,9 +196,9 @@ class AppViewModel: ViewModel() {
             TypeSelected.GRAY_TEXT.stringValue -> {
                 Text(
                     text = content,
-                    modifier = Modifier.Companion
+                    modifier = Modifier
                         .background(
-                            Color.Companion.Gray,
+                            Color.Gray,
                             shape = androidx.compose.foundation.shape.RoundedCornerShape(10.dp)
                         )
                         .padding(8.dp)
@@ -208,8 +208,8 @@ class AppViewModel: ViewModel() {
             TypeSelected.LINK.stringValue -> {
                 Text(
                     text = content,
-                    color = Color.Companion.White,
-                    modifier = Modifier.Companion
+                    color = Color.White,
+                    modifier = Modifier
                         .padding(vertical = 16.dp)
                         .clickable {
                             onLinkClick(linkUrl ?: "")
@@ -228,12 +228,12 @@ class AppViewModel: ViewModel() {
                         onClick = {
                             navController.navigateToSheet(parentTopicId, sheet.title)
                         },
-                        modifier = Modifier.Companion
+                        modifier = Modifier
                             .padding(vertical = 4.dp)
                     ) {
                         Text(
                             text = content,
-                            color = Color.Companion.White
+                            color = Color.White
                         )
                     }
                 }
@@ -242,7 +242,7 @@ class AppViewModel: ViewModel() {
             TypeSelected.TEXT.stringValue -> {
                 Text(
                     text = "☉ $content",
-                    modifier = Modifier.Companion
+                    modifier = Modifier
                         .padding(vertical = 4.dp)
                 )
             }
