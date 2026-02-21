@@ -28,17 +28,9 @@ import androidx.compose.runtime.collectAsState
 import com.childhealth.viewmodel.AppViewModel
 import com.childhealth.navigateToTopic
 
-//import com.childhealth.navigateToTopic
-//import com.childhealth.viewmodel.AppViewModel
-
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ContentScreen(navController: NavHostController, appViewModel: AppViewModel) {
-
-//    val context = LocalContext.current
-//    val jsonString =  context.assets.readFile("childhealth.json")
-//    val topics: List<TopicItem> = Json.decodeFromString(jsonString)
 
     val topics by appViewModel.topics.collectAsState()
 

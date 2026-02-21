@@ -33,10 +33,6 @@ import androidx.core.net.toUri
 import com.childhealth.viewmodel.AppViewModel
 import com.childhealth.models.TopicItem
 
-//import com.childhealth.models.TopicItem
-//import com.childhealth.viewmodel.AppViewModel
-
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 
@@ -104,7 +100,6 @@ fun TopicScreen(
                     ) {
                         section.content.forEach { content ->
                             viewModel.TypeBuilder(
-                                //id = content.id,
                                 parentTopicId = topic.id,
                                 content = content.content,
                                 type = content.type,
@@ -118,11 +113,9 @@ fun TopicScreen(
                                             (context as? ComponentActivity)?.startActivity(intent)
                                         } else {
                                             Toast.makeText(context, "Cannot open external link: Internet connection?", Toast.LENGTH_SHORT).show()
-//                                            Log.w("TopicScreen", "No activity found to handle ACTION_VIEW for URI: $link")
                                         }
                                     } catch (e: Exception) {
                                         Toast.makeText(context, "Error opening external link: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
-//                                        Log.e("TopicScreen", "Error creating or starting intent for URI: $link", e)
                                     }
                                 }
                             )

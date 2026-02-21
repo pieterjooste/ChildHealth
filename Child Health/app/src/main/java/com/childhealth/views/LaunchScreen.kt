@@ -33,9 +33,6 @@ import kotlinx.coroutines.delay
 import androidx.compose.ui.platform.LocalDensity
 import com.childhealth.R
 
-//import com.childhealth.R
-
-
 @Composable
 fun LaunchScreen(navController: NavHostController) {
     var isActive by remember { mutableStateOf(false) }
@@ -48,7 +45,6 @@ fun LaunchScreen(navController: NavHostController) {
 
     if (isActive) {
         navController.navigate(ContentRoute)
-        //IntroScreen(onContinue = { navController.navigate(ContentRoute) })
     } else {
         Box(
             modifier = Modifier
@@ -61,7 +57,6 @@ fun LaunchScreen(navController: NavHostController) {
                     .fillMaxSize()
                     .wrapContentSize(Alignment.Center)
             ) {
-                //val isCompact = LocalConfiguration.current.screenWidthDp < 600
                 val isCompact = LocalWindowInfo.current.containerSize.width < with(LocalDensity.current) { 600.dp.toPx() }
                 if (isCompact) {
                     CompactLayout()

@@ -1,7 +1,6 @@
 package com.childhealth
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
@@ -81,8 +80,7 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
         composable<TopicRoute> { backStackEntry ->
             val routeArgs = try {
                 backStackEntry.toRoute<TopicRoute>()
-            } catch (e: IllegalArgumentException) {
-                Log.e("AppNavigator", "TopicRoute: Failed to parse arguments.", e)
+            } catch (_: IllegalArgumentException) {
                 navController.popBackStack()
                 return@composable
             }
@@ -117,8 +115,7 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
         composable<SheetRoute> { backStackEntry ->
             val routeArgs = try {
                 backStackEntry.toRoute<SheetRoute>()
-            } catch (e: IllegalArgumentException) {
-                Log.e("AppNavigator", "SheetRoute: Failed to parse arguments.", e)
+            } catch (_: IllegalArgumentException) {
                 navController.popBackStack()
                 return@composable
             }
@@ -151,13 +148,10 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
     }
 }
 
-// --- Helper functions for navigation ---
-
 fun NavHostController.navigateToTopic(topicId: String) {
     this.navigate(TopicRoute(name = topicId))
 }
 
-// Updated to take sheetTitle
 fun NavHostController.navigateToSheet(topicId: String, sheetTitle: String) {
     this.navigate(SheetRoute(name = topicId, title = sheetTitle))
 }

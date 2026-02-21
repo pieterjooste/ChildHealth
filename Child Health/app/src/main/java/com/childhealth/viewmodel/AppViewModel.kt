@@ -1,7 +1,6 @@
 package com.childhealth.viewmodel
 
 import android.content.Context
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -43,7 +42,6 @@ class AppViewModel: ViewModel() {
     private val _topics = MutableStateFlow<List<TopicItem>>(emptyList())
     val topics: StateFlow<List<TopicItem>> = _topics
 
-    // Other StateFlows for loading state, etc.
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
@@ -63,12 +61,9 @@ class AppViewModel: ViewModel() {
                     .use { it.readText() }
                 val topicsList = Json.decodeFromString<List<TopicItem>>(jsonString)
                 _topics.value = topicsList
-            } catch (e: IOException) {
-                e.printStackTrace()
-                _topics.value = emptyList() // Handle the error case
-            } catch (e: SerializationException) {
-                // Handle JSON parsing error
-                e.printStackTrace()
+            } catch (_: IOException) {
+                _topics.value = emptyList()
+            } catch (_: SerializationException) {
                 _topics.value = emptyList()
             } finally {
                 _isLoading.value = false
@@ -77,41 +72,34 @@ class AppViewModel: ViewModel() {
     }
 
     fun getTopicById(topicIdToFind: String): StateFlow<TopicItem?> {
-        // This will map over the _topics StateFlow.
-        // Whenever _topics updates, this mapping will re-evaluate.
         return _topics.map { currentTopicsList ->
             currentTopicsList.find { topic -> topic.name == topicIdToFind }
         }.stateIn(
-            scope = viewModelScope, // Scope for sharing the StateFlow
-            started = SharingStarted.WhileSubscribed(5000L), // Keep active for 5s after last subscriber, adjust as needed
-            initialValue = null // Initial value before _topics emits or if not found immediately
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000L),
+            initialValue = null
         )
     }
 
     fun getSheetByTitle(parentTopicId: String, sheetTitleToFind: String): StateFlow<Sheet?> {
-        Log.d("AppViewModel", "getSheetByTitle called for parentID: '$parentTopicId', sheetTitle: '$sheetTitleToFind'")
         return _topics.map { topicsList: List<TopicItem> ->
             val parentTopic = topicsList.find { topic -> topic.id == parentTopicId }
             var foundSheet: Sheet? = null
 
             if (parentTopic != null) {
-                // Iterate through each section in the parent topic
                 for (section in parentTopic.sections) {
-                    // Iterate through each content item in the current section
                     for (contentItem in section.content) {
-                        // Check if this content item has a sheet and if that sheet's title matches
                         if (contentItem.sheet != null && contentItem.sheet.title == sheetTitleToFind) {
                             foundSheet = contentItem.sheet
-                            break // Found the sheet, stop searching content items
+                            break
                         }
                     }
                     if (foundSheet != null) {
-                        break // Found the sheet, stop searching sections
+                        break
                     }
                 }
             }
 
-            Log.d("AppViewModel", "getSheetByTitle mapping for parentID '$parentTopicId', title '$sheetTitleToFind'. Parent found: ${parentTopic != null}, Sheet found: ${foundSheet != null}")
             foundSheet
         }.stateIn(
             scope = viewModelScope,
@@ -143,7 +131,6 @@ class AppViewModel: ViewModel() {
     fun TypeBuilder(
         navController: NavHostController,
         parentTopicId: String,
-        //id: Int,
         content: String,
         type: String,
         linkUrl: String?,

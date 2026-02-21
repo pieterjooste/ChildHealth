@@ -15,6 +15,6 @@ data class TopicRoute(
 
 @Serializable
 data class SheetRoute(
-    val name: String,    // ID of the parent TopicItem
-    val title: String // Using the Sheet's title as its identifier for navigation
+    val name: String,
+    val title: String
 )

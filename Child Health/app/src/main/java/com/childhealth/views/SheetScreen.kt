@@ -32,8 +32,6 @@ import androidx.navigation.NavHostController
 import androidx.core.net.toUri
 import com.childhealth.viewmodel.AppViewModel
 import com.childhealth.models.Sheet
-//import com.childhealth.models.Sheet
-//import com.childhealth.viewmodel.AppViewModel
 import com.google.android.play.core.review.ReviewManagerFactory
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -77,18 +75,13 @@ fun SheetScreen(
                                     val reviewInfo = task.result
                                     val flow = reviewManager.launchReviewFlow(activity, reviewInfo)
                                     flow.addOnCompleteListener { _ ->
-                                        // The review flow has finished. The API does not indicate whether the user
-                                        // reviewed or not, or even whether the review dialog was shown. Thus, no matter
-                                        // what the result is, navigate back.
                                         navController.popBackStack()
                                     }
                                 } else {
-                                    // There was some problem, continue to navigate back
                                     navController.popBackStack()
                                 }
                             }
                         } else {
-                            // If activity is null, just navigate back
                             navController.popBackStack()
                         }
                     }) {
@@ -122,7 +115,6 @@ fun SheetScreen(
                         modifier = Modifier.padding(16.dp)
                     ) {
                         viewModel.TypeBuilder(
-                            //id = section.id,
                             content = section.content,
                             type = section.type,
                             linkUrl = section.linkUrl,
@@ -130,19 +122,15 @@ fun SheetScreen(
                             navController = navController,
                             parentTopicId = parentTopicId,
                             onLinkClick = { link ->
-//                                    val intent = Intent(Intent.ACTION_VIEW, link.toUri())
-//                                    (context as? ComponentActivity)?.startActivity(intent)
                                 try {
                                     val intent = Intent(Intent.ACTION_VIEW, link.toUri())
                                     if (intent.resolveActivity(context.packageManager) != null) {
                                         (context as? ComponentActivity)?.startActivity(intent)
                                     } else {
                                         Toast.makeText(context, "Cannot open external link: Internet connection?", Toast.LENGTH_SHORT).show()
-//                                            Log.w("TopicScreen", "No activity found to handle ACTION_VIEW for URI: $link")
                                     }
                                 } catch (e: Exception) {
                                     Toast.makeText(context, "Error opening external link: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
-//                                        Log.e("TopicScreen", "Error creating or starting intent for URI: $link", e)
                                 }
                             }
                         )
