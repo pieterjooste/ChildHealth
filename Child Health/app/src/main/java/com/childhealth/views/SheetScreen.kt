@@ -30,7 +30,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.core.net.toUri
-import com.childhealth.viewmodel.AppViewModel
 import com.childhealth.models.Sheet
 import com.google.android.play.core.review.ReviewManagerFactory
 
@@ -40,7 +39,6 @@ import com.google.android.play.core.review.ReviewManagerFactory
 fun SheetScreen(
     navController: NavHostController,
     sheet: Sheet,
-    viewModel: AppViewModel,
     parentTopicId: String
 ) {
 
@@ -114,7 +112,7 @@ fun SheetScreen(
                     Column(
                         modifier = Modifier.padding(16.dp)
                     ) {
-                        viewModel.TypeBuilder(
+                        TypeBuilder(
                             content = section.content,
                             type = section.type,
                             linkUrl = section.linkUrl,

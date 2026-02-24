@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
                     val appViewModel: AppViewModel = viewModel()
 
                     LaunchedEffect(Unit) {
-                        appViewModel.loadTopics(applicationContext)
+                        appViewModel.loadTopics()
                     }
                     AppNavigator(navController = rememberNavController(), appViewModel = appViewModel)
                 }
@@ -91,7 +91,6 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
             if (topicItem != null) {
                 TopicScreen(
                     navController = navController,
-                    viewModel = appViewModel,
                     topic = topicItem!!
                 )
             } else {
@@ -128,7 +127,6 @@ fun AppNavigator(navController: NavHostController, appViewModel: AppViewModel) {
             if (sheet != null) {
                 SheetScreen(
                     navController = navController,
-                    viewModel = appViewModel,
                     sheet = sheet!!,
                     parentTopicId = parentTopicId
                 )

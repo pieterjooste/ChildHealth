@@ -30,16 +30,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.core.net.toUri
-import com.childhealth.viewmodel.AppViewModel
 import com.childhealth.models.TopicItem
+import com.childhealth.ui.theme.getColorFromName
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 
 fun TopicScreen(
     navController: NavHostController,
-    topic: TopicItem,
-    viewModel: AppViewModel
+    topic: TopicItem
 ) {
 
     val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior(rememberTopAppBarState())
@@ -91,7 +90,7 @@ fun TopicScreen(
                         .fillMaxWidth()
                         .padding(8.dp)
                         .background(
-                            color = viewModel.getColorFromName(section.background),
+                            color = getColorFromName(section.background),
                             shape = RoundedCornerShape(10.dp)
                         )
                 ) {
@@ -99,7 +98,7 @@ fun TopicScreen(
                         modifier = Modifier.padding(16.dp)
                     ) {
                         section.content.forEach { content ->
-                            viewModel.TypeBuilder(
+                            TypeBuilder(
                                 parentTopicId = topic.id,
                                 content = content.content,
                                 type = content.type,
