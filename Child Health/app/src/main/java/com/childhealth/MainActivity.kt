@@ -153,5 +153,3 @@ fun NavHostController.navigateToTopic(topicId: String) {
 fun NavHostController.navigateToSheet(topicId: String, sheetTitle: String) {
     this.navigate(SheetRoute(name = topicId, title = sheetTitle))
 }
-
-

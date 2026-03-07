@@ -21,6 +21,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -35,7 +36,6 @@ import com.google.android.play.core.review.ReviewManagerFactory
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-
 fun SheetScreen(
     navController: NavHostController,
     sheet: Sheet,
@@ -64,26 +64,33 @@ fun SheetScreen(
         bottomBar = {
             BottomAppBar(
                 actions = {
-                    IconButton(onClick = {
-                        if (activity != null) {
-                            val reviewManager = ReviewManagerFactory.create(activity)
-                            val request = reviewManager.requestReviewFlow()
-                            request.addOnCompleteListener { task ->
-                                if (task.isSuccessful) {
-                                    val reviewInfo = task.result
-                                    val flow = reviewManager.launchReviewFlow(activity, reviewInfo)
-                                    flow.addOnCompleteListener { _ ->
+                    IconButton(
+                        onClick = {
+                            if (activity != null) {
+                                val reviewManager = ReviewManagerFactory.create(activity)
+                                val request = reviewManager.requestReviewFlow()
+                                request.addOnCompleteListener { task ->
+                                    if (task.isSuccessful) {
+                                        val reviewInfo = task.result
+                                        val flow = reviewManager.launchReviewFlow(activity, reviewInfo)
+                                        flow.addOnCompleteListener { _ ->
+                                            navController.popBackStack()
+                                        }
+                                    } else {
                                         navController.popBackStack()
                                     }
-                                } else {
-                                    navController.popBackStack()
                                 }
+                            } else {
+                                navController.popBackStack()
                             }
-                        } else {
-                            navController.popBackStack()
-                        }
-                    }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Arrow Back")
+                        },
+                        modifier = Modifier.size(48.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Arrow Back",
+                            modifier = Modifier.size(32.dp)
+                        )
                     }
                     Text(text = "Back to Topic",
                         style = TextStyle(fontSize = 18.sp, fontWeight = FontWeight.Bold)
@@ -96,42 +103,50 @@ fun SheetScreen(
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize()
-                .background(
-                    color = Color.Gray,
-                    shape = RoundedCornerShape(10.dp)
-                )
-                .verticalScroll(rememberScrollState())
+                .background(color = Color.LightGray) // Changed for better contrast
+                .verticalScroll(rememberScrollState()),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-
-            sheet.sheetContent.forEach { section ->
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(8.dp)
-                ) {
-                    Column(
-                        modifier = Modifier.padding(16.dp)
+            // Adaptive constraint: Limits width on large screens (API 36+)
+            Column(
+                modifier = Modifier
+                    .widthIn(max = 800.dp)
+                    .padding(8.dp)
+                    .background(
+                        color = Color.Gray,
+                        shape = RoundedCornerShape(10.dp)
+                    )
+            ) {
+                sheet.sheetContent.forEach { section ->
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(8.dp)
                     ) {
-                        TypeBuilder(
-                            content = section.content,
-                            type = section.type,
-                            linkUrl = section.linkUrl,
-                            sheet = section.sheet,
-                            navController = navController,
-                            parentTopicId = parentTopicId,
-                            onLinkClick = { link ->
-                                try {
-                                    val intent = Intent(Intent.ACTION_VIEW, link.toUri())
-                                    if (intent.resolveActivity(context.packageManager) != null) {
-                                        (context as? ComponentActivity)?.startActivity(intent)
-                                    } else {
-                                        Toast.makeText(context, "Cannot open external link: Internet connection?", Toast.LENGTH_SHORT).show()
+                        Column(
+                            modifier = Modifier.padding(16.dp)
+                        ) {
+                            TypeBuilder(
+                                content = section.content,
+                                type = section.type,
+                                linkUrl = section.linkUrl,
+                                sheet = section.sheet,
+                                navController = navController,
+                                parentTopicId = parentTopicId,
+                                onLinkClick = { link ->
+                                    try {
+                                        val intent = Intent(Intent.ACTION_VIEW, link.toUri())
+                                        if (intent.resolveActivity(context.packageManager) != null) {
+                                            (context as? ComponentActivity)?.startActivity(intent)
+                                        } else {
+                                            Toast.makeText(context, "Cannot open external link: Internet connection?", Toast.LENGTH_SHORT).show()
+                                        }
+                                    } catch (e: Exception) {
+                                        Toast.makeText(context, "Error opening external link: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
                                     }
-                                } catch (e: Exception) {
-                                    Toast.makeText(context, "Error opening external link: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
                                 }
-                            }
-                        )
+                            )
+                        }
                     }
                 }
             }

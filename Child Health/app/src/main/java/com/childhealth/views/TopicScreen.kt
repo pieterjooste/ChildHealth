@@ -21,8 +21,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberTopAppBarState
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -35,7 +35,6 @@ import com.childhealth.ui.theme.getColorFromName
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-
 fun TopicScreen(
     navController: NavHostController,
     topic: TopicItem
@@ -49,10 +48,7 @@ fun TopicScreen(
             CenterAlignedTopAppBar(
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    scrolledContainerColor = Color.Unspecified,
-                    navigationIconContentColor = Color.Unspecified,
                     titleContentColor = MaterialTheme.colorScheme.primary,
-                    actionIconContentColor = Color.Unspecified
                 ),
                 title = {
                     Text(topic.name,
@@ -65,10 +61,15 @@ fun TopicScreen(
         bottomBar = {
             BottomAppBar(
                 actions = {
-                    IconButton(onClick = {
-                        navController.popBackStack()
-                    }) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Arrow Back")
+                    IconButton(
+                        onClick = { navController.popBackStack() },
+                        modifier = Modifier.size(48.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Arrow Back",
+                            modifier = Modifier.size(32.dp)
+                        )
                     }
                     Text(text = "Back to Topics",
                         style = TextStyle(fontSize = 18.sp, fontWeight = FontWeight.Bold)
@@ -81,43 +82,50 @@ fun TopicScreen(
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState())
+                .verticalScroll(rememberScrollState()),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-
-            topic.sections.forEach { section ->
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(8.dp)
-                        .background(
-                            color = getColorFromName(section.background),
-                            shape = RoundedCornerShape(10.dp)
-                        )
-                ) {
-                    Column(
-                        modifier = Modifier.padding(16.dp)
-                    ) {
-                        section.content.forEach { content ->
-                            TypeBuilder(
-                                parentTopicId = topic.id,
-                                content = content.content,
-                                type = content.type,
-                                linkUrl = content.linkUrl,
-                                sheet = content.sheet,
-                                navController = navController,
-                                onLinkClick = { link ->
-                                    try {
-                                        val intent = Intent(Intent.ACTION_VIEW, link.toUri())
-                                        if (intent.resolveActivity(context.packageManager) != null) {
-                                            (context as? ComponentActivity)?.startActivity(intent)
-                                        } else {
-                                            Toast.makeText(context, "Cannot open external link: Internet connection?", Toast.LENGTH_SHORT).show()
-                                        }
-                                    } catch (e: Exception) {
-                                        Toast.makeText(context, "Error opening external link: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
-                                    }
-                                }
+            // Adaptive constraint: Limits width on large screens (API 36+)
+            Column(
+                modifier = Modifier
+                    .widthIn(max = 800.dp)
+                    .fillMaxWidth()
+            ) {
+                topic.sections.forEach { section ->
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(8.dp)
+                            .background(
+                                color = getColorFromName(section.background),
+                                shape = RoundedCornerShape(10.dp)
                             )
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(16.dp)
+                        ) {
+                            section.content.forEach { content ->
+                                TypeBuilder(
+                                    parentTopicId = topic.id,
+                                    content = content.content,
+                                    type = content.type,
+                                    linkUrl = content.linkUrl,
+                                    sheet = content.sheet,
+                                    navController = navController,
+                                    onLinkClick = { link ->
+                                        try {
+                                            val intent = Intent(Intent.ACTION_VIEW, link.toUri())
+                                            if (intent.resolveActivity(context.packageManager) != null) {
+                                                (context as? ComponentActivity)?.startActivity(intent)
+                                            } else {
+                                                Toast.makeText(context, "Cannot open external link: Internet connection?", Toast.LENGTH_SHORT).show()
+                                            }
+                                        } catch (e: Exception) {
+                                            Toast.makeText(context, "Error opening external link: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
+                                        }
+                                    }
+                                )
+                            }
                         }
                     }
                 }
